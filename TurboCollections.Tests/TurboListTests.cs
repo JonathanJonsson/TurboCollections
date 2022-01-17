@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using NUnit.Framework;
 
@@ -80,5 +81,16 @@ public class TurboListTests
 		
 		Assert.AreEqual(-1, list.IndexOf(999));
 	}
+
+	[Test]
+	public void RemoveAtIndexAndElementsShiftOneToLeft()
+	{
+		var list = new TurboList<int>();
+		list.Add(1);
+		list.Add(2);
+		list.RemoveAt(0);
+		Assert.AreEqual(1, list.Count);
+	}
+ 
 	
 }

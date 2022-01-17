@@ -51,7 +51,7 @@ public class TurboList<T>
 	{
 		if (index < 0 || index > GetCount())
 		{
-			throw new Exception("Exception: the index is not in inside array!");
+			throw new Exception("Exception: the index is not within the array!");
 		}
 		return items[index];
 	}
@@ -64,9 +64,28 @@ public class TurboList<T>
 	}
 
 	// removes one item from the list. If the 4th item is removed, then the 5th item becomes the 4th, the 6th becomes the 5th and so on.
-	void RemoveAt(int index)
+	public void RemoveAt(int index)
 	{
-		throw new NotImplementedException();
+		if (index < 0 || index>Count)
+		{
+			throw new Exception("Exception: the index is not within the array!");
+		}
+		T[] tempArray = new T[Count-1];
+
+
+		int a = 0;
+		for (int i = 0; i < Count; i++)
+		{
+			if (i != index)
+			{
+				tempArray[a] = items[i];
+				a++;
+			}
+		}
+		
+		items = tempArray;
+
+
 	}
 
 	// returns true, if the given item can be found in the list, else false.

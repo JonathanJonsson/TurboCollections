@@ -82,15 +82,35 @@ public class TurboListTests
 		Assert.AreEqual(-1, list.IndexOf(999));
 	}
 
-	[Test]
-	public void RemoveAtIndexAndElementsShiftOneToLeft()
+	[Test, TestCase(5), TestCase(7)]
+	public void RemoveAtIndexAndElementsShiftOneToLeft(int numberOfElements)
 	{
 		var list = new TurboList<int>();
-		list.Add(1);
-		list.Add(2);
+
+		for (int i = 0; i < numberOfElements; i++)
+		{
+			list.Add(1);
+			
+		}
 		list.RemoveAt(0);
-		Assert.AreEqual(1, list.Count);
+		Assert.AreEqual(numberOfElements-1, list.Count);
 	}
+
+	[Test]
+	public void RemoveSpecifiedItem()
+	{
+		var list = new TurboList<int>();
+		
+		list.Add(3);
+		list.Add(8);
+		list.Remove(3);
+		Assert.IsFalse(list.Contains(3));
+	}
+	
+	
+	
+	
+	
  
 	
 }

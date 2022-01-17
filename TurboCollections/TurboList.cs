@@ -1,6 +1,9 @@
-﻿namespace TurboCollections;
+﻿using System.Collections;
+using System.Collections.Generic;
 
-public class TurboList<T>
+namespace TurboCollections;
+
+public class TurboList<T> //: IEnumerable<T>
 {
 	private T[] items = Array.Empty<T>();
 	// returns the current amount of items contained in the list.
@@ -27,23 +30,6 @@ public class TurboList<T>
 		tempArray[Count] = item;
 		items = tempArray;
 	
-		// //Copy old array into temp array
-		// for (int i = 0; i < Count; i++)
-		// {
-		// 	tempArray[i] = items[i];
-		// }
-		// //Increase Count by 1
-		// Count++;
-		// //extend old array by 1
-		// items = new T[Count];
-		//
-		// //Copy temp array into old extended array
-		// for (int i = 0; i < Count-1; i++)
-		// {
-		// 	items[i] = tempArray[i];
-		// }
-		// //Add new item to the end of array
-		// items[Count - 1] = item;
 	}
 
 	// gets the item at the specified index. If the index is outside the correct range, an exception is thrown.
@@ -72,7 +58,6 @@ public class TurboList<T>
 		}
 		T[] tempArray = new T[Count-1];
 
-
 		int a = 0;
 		for (int i = 0; i < Count; i++)
 		{
@@ -84,7 +69,6 @@ public class TurboList<T>
 		}
 		
 		items = tempArray;
-
 
 	}
 
@@ -119,9 +103,20 @@ public class TurboList<T>
 	}
 
 	// removes the specified item from the list, if it can be found.
-	void Remove(T item)
+	public void Remove(T item)
 	{
-		throw new NotImplementedException();
+		var indexOfItem = -1;
+		
+		if (IndexOf(item) != -1)
+		{
+			indexOfItem = IndexOf(item);
+
+		}
+		else
+		{
+			throw new Exception("Exception: item was not found and no index could be retrieved!");
+		}
+		RemoveAt(indexOfItem);
 	}
 
 	// adds multiple items to this list at once.
@@ -130,7 +125,9 @@ public class TurboList<T>
 		throw new NotImplementedException();
 	}
 
+	
 	// gets the iterator for this collection. Used by IEnumerator to support foreach.
-	// IEnumerator<T>.GetEnumerator();
+	// IEnumerator<T> IEnumerable<T>.GetEnumerator();
+	
 
 }

@@ -39,7 +39,8 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.build.unityPlugin" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.CustomManagement">
@@ -72,6 +73,8 @@
       <updated>1642424487877</updated>
       <workItem from="1642424490946" duration="4275000" />
       <workItem from="1642428981186" duration="3694000" />
+      <workItem from="1642442665107" duration="932000" />
+      <workItem from="1642443626622" duration="835000" />
     </task>
     <servers />
   </component>
@@ -94,5 +97,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

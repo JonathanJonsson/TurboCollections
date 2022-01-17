@@ -50,8 +50,35 @@ public class TurboListTests
 		list.Clear();
 		Assert.Zero(list.Count);
 	}
-	
+
 	[Test]
-	// public void CheckIf
+	public void CheckIfArrayContainsItem()
+	{
+		var list = new TurboList<int>();
+		list.Add(4);
+		list.Add(9);
+		list.Add(3);
+
+		Assert.True(list.Contains(3));
+	
+	}
+
+	[Test]
+	public void GetIndexOfPresentElement()
+	{
+		var list = new TurboList<int>();
+		list.Add(1);
+		list.Add(2);
+		
+		Assert.AreEqual(0,list.IndexOf(1));
+	}
+
+	[Test]
+	public void GetIndexOfNotPresentElement()
+	{
+		var list = new TurboList<int>();
+		
+		Assert.AreEqual(-1, list.IndexOf(999));
+	}
 	
 }

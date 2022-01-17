@@ -70,15 +70,33 @@ public class TurboList<T>
 	}
 
 	// returns true, if the given item can be found in the list, else false.
-	bool Contains(T item)
+	public bool Contains(T item)
 	{
-		throw new NotImplementedException();
+		for (int i = 0; i < Count; i++)
+		{
+			if (item.Equals(items[i]))
+			{
+				return true;
+
+			}
+		}
+
+		return false;
 	}
 
 	// returns the index of the given item if it is in the list, else -1.
-	int IndexOf(T item)
+	public int IndexOf(T item)
 	{
-		throw new NotImplementedException();
+		for (int i = 0; i < Count; i++)
+		{
+			if (item.Equals(items[i]))
+			{
+				return i;
+
+			}
+		}
+
+		return -1;
 	}
 
 	// removes the specified item from the list, if it can be found.

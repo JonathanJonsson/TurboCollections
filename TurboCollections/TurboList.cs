@@ -59,7 +59,7 @@ public class TurboList<T>
 	// removes all items from the list.
 	public void Clear()
 	{
-		
+		items = Array.Empty<T>();
 
 	}
 

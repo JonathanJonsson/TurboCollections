@@ -14,7 +14,7 @@ public class TurboListTests
 	}
 
 	[Test]
-	public void AddingAnElementIncreasesCountToOne()
+	public void AddingAnElementIncreasesCountToOne() // Is this test relevant anymore?
 	{
 		var list = new TurboList<int>();
 		list.Add(5);
@@ -106,11 +106,37 @@ public class TurboListTests
 		list.Remove(3);
 		Assert.IsFalse(list.Contains(3));
 	}
-	
-	
-	
-	
-	
- 
+
+	[Test]
+	public void SetItemInList()
+	{
+		var list = new TurboList<int>();
+		
+		list.Add(1);
+		list.Add(2);
+		list.Set(0, 10);
+		Assert.AreEqual(10, list.Get(0));
+
+	}
+
+	[Test]
+	public void NoDoubleArraySizeWhenAddingOneObject()
+	{
+		var list = new TurboList<int>();
+		
+		list.Add(1);
+		Assert.AreEqual(list.Count, list.GetArraySize());
+		 
+	}
+
+	[Test]
+	public void DoubleArraySizeWhenCountExceedsArraySize()
+	{
+		var list = new TurboList<int>();
+		
+		list.Add(2);
+		list.Add(4);
+		Assert.AreEqual(2, list.GetArraySize());
+	}
 	
 }

@@ -7,11 +7,17 @@ public class TurboList<T> //: IEnumerable<T>
 {
 	private T[] items = Array.Empty<T>();
 	// returns the current amount of items contained in the list.
-	public int Count => items.Length;
+	public int Count =0;
+	private int arraySize = 1;
 	
 	public int GetCount()
 	{
 		return Count;
+	}
+
+	public int GetArraySize()
+	{
+		return arraySize;
 	}
 	
 	// adds one item to the end of the list.
@@ -22,12 +28,18 @@ public class TurboList<T> //: IEnumerable<T>
 		// //Create new temp array with size of old array
 		T[] tempArray = new T[Count+1];
 
-		for (int i = 0; i < Count; i++)
+		if (arraySize <= Count)
+		{
+			arraySize *= 2;
+		}
+
+		Count++;
+		for (int i = 0; i < Count-1; i++)
 		{
 			tempArray[i] = items[i];
 		}
 		
-		tempArray[Count] = item;
+		tempArray[Count-1] = item;
 		items = tempArray;
 	
 	}
@@ -42,10 +54,21 @@ public class TurboList<T> //: IEnumerable<T>
 		return items[index];
 	}
 
+	public T Set(int index, T value)
+	{
+		if (index < 0 || index > GetCount())
+		{
+			throw new Exception("Exception: the index is not within the array!");
+			
+		}
+		return items[index] = value;
+	}
+
 	// removes all items from the list.
 	public void Clear()
 	{
 		items = Array.Empty<T>();
+		Count = 0;
 
 	}
 
@@ -59,7 +82,7 @@ public class TurboList<T> //: IEnumerable<T>
 		T[] tempArray = new T[Count-1];
 
 		int a = 0;
-		for (int i = 0; i < Count; i++)
+		for (int i = 0; i < Count-1; i++)
 		{
 			if (i != index)
 			{
@@ -67,7 +90,8 @@ public class TurboList<T> //: IEnumerable<T>
 				a++;
 			}
 		}
-		
+
+		Count--;
 		items = tempArray;
 
 	}
@@ -116,6 +140,7 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			throw new Exception("Exception: item was not found and no index could be retrieved!");
 		}
+		
 		RemoveAt(indexOfItem);
 	}
 
@@ -128,6 +153,6 @@ public class TurboList<T> //: IEnumerable<T>
 	
 	// gets the iterator for this collection. Used by IEnumerator to support foreach.
 	// IEnumerator<T> IEnumerable<T>.GetEnumerator();
+	// IEnumerator<T> IEnumerable<T>.GetEnumerator();
 	
-
 }

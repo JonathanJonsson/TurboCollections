@@ -2,74 +2,68 @@
 
 public class TurboStack<T>
 {
-	private T?[] stack = Array.Empty<T>();
-	
+	private int arraySize;
+
 	private int count;
-	private int arraySize = 0;
-	
+	private T?[] stack = Array.Empty<T>();
+
 	public int GetCount()
 	{
 		return count;
 	}
- 
+
 	// adds one item on top of the stack.
 	public void Push(T? item)
 	{
-		if (arraySize ==0)
+		if (arraySize == 0)
 		{
 			arraySize = 1;
 		}
+
 		if (arraySize <= count)
 		{
 			arraySize *= 2;
 		}
 
 		count++;
-		T?[] tempStack = new T?[count];
-		for (int i = 0; i < count-1; i++)
+		var tempStack = new T?[count];
+
+		for (var i = 0; i < count - 1; i++)
 		{
 			tempStack[i] = stack[i];
 		}
-		
-		tempStack[count-1] = item;
+
+		tempStack[count - 1] = item;
 		stack = tempStack;
-		
 	}
+
 	// // returns the item on top of the stack without removing it.
 	public T? Peek()
 	{
-		return stack[count-1];
+		return stack[count - 1];
 	}
-	
+
 	// // returns the item on top of the stack and removes it at the same time.
 	public T? Pop()
 	{
 		count--; // = Count-1
 		var objectToReturn = stack[count];
- 
 		stack[count] = default;
 
 		return objectToReturn;
 	}
-	
+
 	// // removes all items from the stack.
 	public void Clear()
 	{
-		for (int i = 0; i < count-1; i++)
+		for (var i = 0; i < count - 1; i++)
 		{
 			stack[i] = default;
 		}
- 
+
 		count = 0;
 	}
-	
+
 	// // gets the iterator for this collection. Used by IEnumerable<T>-Interface to support foreach.
-// // IEnumerator<T> IEnumerable<T>.GetEnumerator();
-	
-	
-	
-	
-	
-	
-	
+	// // IEnumerator<T> IEnumerable<T>.GetEnumerator();
 }

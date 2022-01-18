@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-namespace TurboCollections;
+﻿namespace TurboCollections;
 
 public class TurboList<T> //: IEnumerable<T>
 {
-	private T[] items = Array.Empty<T>();
-	
+	private int arraySize;
+
 	// returns the current amount of items contained in the list.
-	public int Count =0;
-	private int arraySize = 0;
-	
+	public int Count;
+	private T[] items = Array.Empty<T>();
+
 	public int GetCount()
 	{
 		return Count;
@@ -20,7 +17,7 @@ public class TurboList<T> //: IEnumerable<T>
 	{
 		return arraySize;
 	}
-	
+
 	// adds one item to the end of the list.
 	public void Add(T item)
 	{
@@ -29,8 +26,9 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			arraySize = 1;
 		}
+
 		// //Create new temp array with size of old array
-		T[] tempArray = new T[Count+1];
+		var tempArray = new T[Count + 1];
 
 		if (arraySize <= Count)
 		{
@@ -38,14 +36,14 @@ public class TurboList<T> //: IEnumerable<T>
 		}
 
 		Count++;
-		for (int i = 0; i < Count-1; i++)
+
+		for (var i = 0; i < Count - 1; i++)
 		{
 			tempArray[i] = items[i];
 		}
-		
-		tempArray[Count-1] = item;
+
+		tempArray[Count - 1] = item;
 		items = tempArray;
-	
 	}
 
 	// gets the item at the specified index. If the index is outside the correct range, an exception is thrown.
@@ -55,6 +53,7 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			throw new Exception("Exception: the index is not within the array!");
 		}
+
 		return items[index];
 	}
 
@@ -63,36 +62,35 @@ public class TurboList<T> //: IEnumerable<T>
 		if (index < 0 || index > GetCount())
 		{
 			throw new Exception("Exception: the index is not within the array!");
-			
 		}
+
 		items[index] = value;
 	}
 
 	// removes all items from the list.
 	public void Clear()
 	{
-		for (int i = 0; i < Count-1; i++)
+		for (var i = 0; i < Count - 1; i++)
 		{
 			items[i] = default;
 		}
-		
-		Count = 0;
 
+		Count = 0;
 	}
 
 	// removes one item from the list. If the 4th item is removed, then the 5th item becomes the 4th, the 6th becomes the 5th and so on.
 	public void RemoveAt(int index)
 	{
-		if (index < 0 || index>Count)
+		if (index < 0 || index > Count)
 		{
 			throw new Exception("Exception: the index is not within the array!");
 		}
-	
 
-		T[] tempArray = new T[items.Length];
+		var tempArray = new T[items.Length];
 		Count--;
-		int a = 0;
-		for (int i = 0; i <= Count; i++)
+		var a = 0;
+
+		for (var i = 0; i <= Count; i++)
 		{
 			if (i != index)
 			{
@@ -103,19 +101,17 @@ public class TurboList<T> //: IEnumerable<T>
 			{
 				tempArray[i] = default;
 			}
-			
 		}
 
 		items = tempArray;
-
 	}
 
 	// returns true, if the given item can be found in the list, else false.
 	public bool Contains(T item)
 	{
-		for (int i = 0; i < Count; i++)
+		for (var i = 0; i < Count; i++)
 		{
-			if (Equals(item,items[i]))
+			if (Equals(item, items[i]))
 			{
 				return true;
 			}
@@ -127,14 +123,14 @@ public class TurboList<T> //: IEnumerable<T>
 	// returns the index of the given item if it is in the list, else -1.
 	public int IndexOf(T item)
 	{
-		for (int i = 0; i < Count; i++)
+		for (var i = 0; i < Count; i++)
 		{
 			if (item.Equals(items[i]))
 			{
 				return i;
 			}
 		}
-		
+
 		return -1;
 	}
 
@@ -142,17 +138,16 @@ public class TurboList<T> //: IEnumerable<T>
 	public void Remove(T item)
 	{
 		var indexOfItem = -1;
-		
+
 		if (IndexOf(item) != -1)
 		{
 			indexOfItem = IndexOf(item);
-
 		}
 		else
 		{
 			throw new Exception("Exception: item was not found and no index could be retrieved!");
 		}
-		
+
 		RemoveAt(indexOfItem);
 	}
 
@@ -165,9 +160,7 @@ public class TurboList<T> //: IEnumerable<T>
 		}
 	}
 
-	
 	// gets the iterator for this collection. Used by IEnumerator to support foreach.
 	// IEnumerator<T> IEnumerable<T>.GetEnumerator();
 	// IEnumerator<T> IEnumerable<T>.GetEnumerator();
-	
 }

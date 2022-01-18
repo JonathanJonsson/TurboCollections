@@ -2,7 +2,7 @@
 
 public class TurboStack<T>
 {
-	private T[] stack = Array.Empty<T>();
+	private T?[] stack = Array.Empty<T>();
 	
 	private int count;
 	private int arraySize = 1;
@@ -13,16 +13,15 @@ public class TurboStack<T>
 	}
  
 	// adds one item on top of the stack.
-	public void Push(T item)
+	public void Push(T? item)
 	{
-		T[] tempStack = new T[count+1];
-
 		if (arraySize <= count)
 		{
 			arraySize *= 2;
 		}
 
 		count++;
+		T?[] tempStack = new T?[count];
 		for (int i = 0; i < count-1; i++)
 		{
 			tempStack[i] = stack[i];
@@ -33,30 +32,36 @@ public class TurboStack<T>
 		
 	}
 	// // returns the item on top of the stack without removing it.
-	public T Peek()
+	public T? Peek()
 	{
 		return stack[count - 1];
 	}
 	
 	// // returns the item on top of the stack and removes it at the same time.
-	public T Pop()
+	public T? Pop()
 	{
-		var objectToReturn = stack[count - 1];
-		T[] tempStack = new T[count - 1];
-		for (int i = 0; i < count-1; i++)
+		count--;
+		var objectToReturn = stack[count];
+		T?[] tempStack = new T?[count];
+		for (int i = 0; i < count; i++)
 		{
 			tempStack[i] = stack[i];
 		}
 
-		count--;
+		
 		stack = tempStack;
 
 		return objectToReturn;
 	}
+	
 	// // removes all items from the stack.
 	public void Clear()
 	{
-		stack = Array.Empty<T>();
+		for (int i = 0; i < count-1; i++)
+		{
+			stack[i] = default;
+		}
+		// stack = Array.Empty<T>();
 		count = 0;
 	}
 	

@@ -68,7 +68,11 @@ public class TurboList<T> //: IEnumerable<T>
 	// removes all items from the list.
 	public void Clear()
 	{
-		items = Array.Empty<T>();
+		for (int i = 0; i < Count-1; i++)
+		{
+			items[i] = default;
+		}
+		// items = Array.Empty<T>();
 		Count = 0;
 
 	}
@@ -80,10 +84,12 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			throw new Exception("Exception: the index is not within the array!");
 		}
-		T[] tempArray = new T[Count-1];
+		Count--;
+
+		T[] tempArray = new T[Count];
 
 		int a = 0; 
-		for (int i = 0; i < Count-1; i++)
+		for (int i = 0; i < Count; i++)
 		{
 			if (i != index)
 			{
@@ -92,7 +98,6 @@ public class TurboList<T> //: IEnumerable<T>
 			}
 		}
 
-		Count--;
 		items = tempArray;
 
 	}

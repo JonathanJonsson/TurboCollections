@@ -40,16 +40,9 @@ public class TurboStack<T>
 	// // returns the item on top of the stack and removes it at the same time.
 	public T? Pop()
 	{
-		count--;
+		count--; // = Count-1
 		var objectToReturn = stack[count];
-		// T?[] tempStack = new T?[count];
-		// for (int i = 0; i < count; i++)
-		// {
-		// 	tempStack[i] = stack[i];
-		// }
-		//
-		//
-		// stack = tempStack;
+ 
 		stack[count] = default;
 
 		return objectToReturn;
@@ -62,7 +55,7 @@ public class TurboStack<T>
 		{
 			stack[i] = default;
 		}
-		// stack = Array.Empty<T>();
+ 
 		count = 0;
 	}
 	

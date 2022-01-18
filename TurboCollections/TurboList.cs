@@ -86,25 +86,24 @@ public class TurboList<T> //: IEnumerable<T>
 		}
 	
 
-		T[] tempArray = new T[Count];
+		T[] tempArray = new T[items.Length];
 		Count--;
- 
-		for (int i = 0; i < Count; i++)
+		int a = 0;
+		for (int i = 0; i <= Count; i++)
 		{
 			if (i != index)
 			{
-				tempArray[i] = items[i];  
-	 
+				tempArray[a] = items[i];
+				a++;
 			}
 			else
 			{
 				tempArray[i] = default;
 			}
+			
 		}
 
-		Console.WriteLine(items.Length);
 		items = tempArray;
-		Console.WriteLine(items.Length);
 
 	}
 

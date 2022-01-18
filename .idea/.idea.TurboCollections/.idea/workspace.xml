@@ -11,7 +11,7 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CustomManagement/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CustomManagement/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboListTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboListTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboList.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboStack.cs" afterDir="false" />
     </list>
@@ -37,6 +37,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/60/1a243000/IEnumerator`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Projects/Algorithms and data class/TurboCollections/TurboCollections/TurboStack.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/4c/db281812/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -97,7 +98,7 @@
       <workItem from="1642451198646" duration="120000" />
       <workItem from="1642451328132" duration="340000" />
       <workItem from="1642491602762" duration="4275000" />
-      <workItem from="1642498966260" duration="6419000" />
+      <workItem from="1642498966260" duration="7799000" />
     </task>
     <servers />
   </component>
@@ -127,6 +128,12 @@
         <PinnedItemInfo parentTag="Frame#TurboCollections.TurboStack`1.Push" memberName="tempStack" />
       </pinned-members>
     </pin-to-top-manager>
+    <watches-manager>
+      <configuration name="DotNetProject">
+        <watch expression="this.items" />
+        <watch expression="this.Count" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

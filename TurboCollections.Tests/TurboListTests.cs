@@ -108,6 +108,19 @@ public class TurboListTests
 	}
 
 	[Test]
+	public void CheckThatArraySizeIsConstantAfterRemovingItem()
+	{
+		var list = new TurboList<int>();
+		
+		list.Add(3);
+		list.Add(6);
+		var startingArraySize = list.GetArraySize();
+		list.RemoveAt(0);
+		
+		Assert.AreEqual(list.GetArraySize(), startingArraySize);
+	}
+
+	[Test]
 	public void SetItemInList()
 	{
 		var list = new TurboList<int>();

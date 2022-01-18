@@ -4,7 +4,7 @@ public class TurboStack<T>
 {
 	private T[] stack = Array.Empty<T>();
 	
-	private int count =0;
+	private int count;
 	private int arraySize = 1;
 	
 	public int GetCount()
@@ -59,6 +59,7 @@ public class TurboStack<T>
 		stack = Array.Empty<T>();
 		count = 0;
 	}
+	
 	// // gets the iterator for this collection. Used by IEnumerable<T>-Interface to support foreach.
 	// // IEnumerator<T> IEnumerable<T>.GetEnumerator();
 	

@@ -1,4 +1,6 @@
-﻿namespace TurboCollections.Tests;
+﻿using System;
+
+namespace TurboCollections.Tests;
 using NUnit.Framework;
 
 public class TurboStackTests
@@ -13,6 +15,7 @@ public class TurboStackTests
 		Assert.True(stack.GetCount() > initialStackSize);
 		
 	}
+	
 
 	[Test]
 	public void PeekReturnsLatestAddedValue()
@@ -38,6 +41,11 @@ public class TurboStackTests
 		Assert.AreEqual(5, stack.Peek());
 	}
 
+	void CheckForEmptyStack(TurboStack<int> stack){
+		Assert.Zero(stack.GetCount());
+		Assert.Throws<IndexOutOfRangeException>(()=>stack.Pop());
+	}
+	
 	[Test]
 	public void ClearEmptiesTheStack()
 	{
@@ -49,11 +57,9 @@ public class TurboStackTests
 		stack.Push(2);
 
 		stack.Clear();
-		
-		
-		Assert.Zero(stack.GetCount());
-		
-		
+
+		CheckForEmptyStack(stack);
+
 	}
 	
 }

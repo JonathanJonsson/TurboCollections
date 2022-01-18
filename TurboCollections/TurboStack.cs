@@ -42,14 +42,15 @@ public class TurboStack<T>
 	{
 		count--;
 		var objectToReturn = stack[count];
-		T?[] tempStack = new T?[count];
-		for (int i = 0; i < count; i++)
-		{
-			tempStack[i] = stack[i];
-		}
-
-		
-		stack = tempStack;
+		// T?[] tempStack = new T?[count];
+		// for (int i = 0; i < count; i++)
+		// {
+		// 	tempStack[i] = stack[i];
+		// }
+		//
+		//
+		// stack = tempStack;
+		stack[count] = default;
 
 		return objectToReturn;
 	}

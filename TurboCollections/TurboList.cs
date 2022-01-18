@@ -55,14 +55,14 @@ public class TurboList<T> //: IEnumerable<T>
 		return items[index];
 	}
 
-	public T Set(int index, T value)
+	public void Set(int index, T value)
 	{
 		if (index < 0 || index > GetCount())
 		{
 			throw new Exception("Exception: the index is not within the array!");
 			
 		}
-		return items[index] = value;
+		items[index] = value;
 	}
 
 	// removes all items from the list.
@@ -72,7 +72,7 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			items[i] = default;
 		}
-		// items = Array.Empty<T>();
+		
 		Count = 0;
 
 	}
@@ -84,21 +84,27 @@ public class TurboList<T> //: IEnumerable<T>
 		{
 			throw new Exception("Exception: the index is not within the array!");
 		}
-		Count--;
+	
 
 		T[] tempArray = new T[Count];
-
-		int a = 0; 
+		Count--;
+ 
 		for (int i = 0; i < Count; i++)
 		{
 			if (i != index)
 			{
-				tempArray[a] = items[i]; // temparray need to follow a, cause the one time i!=index --> mismatch otherwise, skipping one array element in temparrayu
-				a++;
+				tempArray[i] = items[i];  
+	 
+			}
+			else
+			{
+				tempArray[i] = default;
 			}
 		}
 
+		Console.WriteLine(items.Length);
 		items = tempArray;
+		Console.WriteLine(items.Length);
 
 	}
 
@@ -125,10 +131,9 @@ public class TurboList<T> //: IEnumerable<T>
 			if (item.Equals(items[i]))
 			{
 				return i;
-
 			}
 		}
-
+		
 		return -1;
 	}
 

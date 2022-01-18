@@ -9,7 +9,7 @@ public class TurboList<T> //: IEnumerable<T>
 	
 	// returns the current amount of items contained in the list.
 	public int Count =0;
-	private int arraySize = 1;
+	private int arraySize = 0;
 	
 	public int GetCount()
 	{
@@ -25,7 +25,10 @@ public class TurboList<T> //: IEnumerable<T>
 	public void Add(T item)
 	{
 		// Array.Resize(ref elements, count);
-		
+		if (arraySize == 0)
+		{
+			arraySize = 1;
+		}
 		// //Create new temp array with size of old array
 		T[] tempArray = new T[Count+1];
 
@@ -112,10 +115,9 @@ public class TurboList<T> //: IEnumerable<T>
 	{
 		for (int i = 0; i < Count; i++)
 		{
-			if (item.Equals(items[i]))
+			if (Equals(item,items[i]))
 			{
 				return true;
-
 			}
 		}
 
@@ -155,9 +157,12 @@ public class TurboList<T> //: IEnumerable<T>
 	}
 
 	// adds multiple items to this list at once.
-	void AddRange(IEnumerable<T> items)
+	public void AddRange(IEnumerable<T> items)
 	{
-		throw new NotImplementedException();
+		foreach (var item in items)
+		{
+			Add(item);
+		}
 	}
 
 	

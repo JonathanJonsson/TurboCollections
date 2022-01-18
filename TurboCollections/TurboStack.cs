@@ -5,7 +5,7 @@ public class TurboStack<T>
 	private T?[] stack = Array.Empty<T>();
 	
 	private int count;
-	private int arraySize = 1;
+	private int arraySize = 0;
 	
 	public int GetCount()
 	{
@@ -15,6 +15,10 @@ public class TurboStack<T>
 	// adds one item on top of the stack.
 	public void Push(T? item)
 	{
+		if (arraySize ==0)
+		{
+			arraySize = 1;
+		}
 		if (arraySize <= count)
 		{
 			arraySize *= 2;

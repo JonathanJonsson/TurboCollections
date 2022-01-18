@@ -38,7 +38,7 @@ public class TurboStack<T>
 	// // returns the item on top of the stack without removing it.
 	public T? Peek()
 	{
-		return stack[count - 1];
+		return stack[count-1];
 	}
 	
 	// // returns the item on top of the stack and removes it at the same time.
@@ -64,7 +64,7 @@ public class TurboStack<T>
 	}
 	
 	// // gets the iterator for this collection. Used by IEnumerable<T>-Interface to support foreach.
-	// // IEnumerator<T> IEnumerable<T>.GetEnumerator();
+// // IEnumerator<T> IEnumerable<T>.GetEnumerator();
 	
 	
 	

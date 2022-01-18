@@ -14,9 +14,9 @@ while (AppRunning)
 	Console.WriteLine("5) Exit Application");
 
 	Console.Write("<<<  ");
-	int a = Convert.ToInt32(Console.ReadLine());
+	int selection = Convert.ToInt32(Console.ReadLine());
 
-	switch (a)
+	switch (selection)
 	{
 		case 1:
 			AddACustomer();

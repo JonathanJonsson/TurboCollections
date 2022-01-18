@@ -2,11 +2,13 @@
 
 using TurboCollections;
 
-var turboList = new TurboList<int>();
-//
-turboList.Add(1);
-turboList.Add(2);
-Console.WriteLine(turboList.GetCount());
-Console.WriteLine(turboList.GetArraySize());
-// turboList.RemoveAt(0);
-// Console.WriteLine(turboList.Get(0));
+var t = new TurboStack<int>();
+
+t.Push(1);
+t.Push(2);
+t.Push(3);
+t.Peek();
+t.Pop();
+t.Peek();
+t.Pop();
+Console.WriteLine("--DONE--");

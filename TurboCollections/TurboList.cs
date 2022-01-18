@@ -6,6 +6,7 @@ namespace TurboCollections;
 public class TurboList<T> //: IEnumerable<T>
 {
 	private T[] items = Array.Empty<T>();
+	
 	// returns the current amount of items contained in the list.
 	public int Count =0;
 	private int arraySize = 1;
@@ -81,12 +82,12 @@ public class TurboList<T> //: IEnumerable<T>
 		}
 		T[] tempArray = new T[Count-1];
 
-		int a = 0;
+		int a = 0; 
 		for (int i = 0; i < Count-1; i++)
 		{
 			if (i != index)
 			{
-				tempArray[a] = items[i];
+				tempArray[a] = items[i]; // temparray need to follow a, cause the one time i!=index --> mismatch otherwise, skipping one array element in temparrayu
 				a++;
 			}
 		}

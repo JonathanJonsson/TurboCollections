@@ -45,6 +45,11 @@ public class TurboQueueTests
 
 		Assert.Throws<Exception>(()=>queue.Dequeue());
 	}
-	
+
+	[Test]
+	public void GetTheFirstElementFromQueueWhenDequeuing()
+	{
+		var queue = new TurboQueue<>()
+	}
 	
 }

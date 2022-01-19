@@ -1,23 +1,24 @@
 ﻿using TurboCollections;
 
-var stack = new TurboStack<string>();
+var gameState = new TurboStack<string>();
+var stateHistory = new TurboStack<string>();
+
 var appIsRunning = true;
-var previousState = "";
-stack.Push("Main Menu");
+gameState.Push("Main Menu");
 
 while (appIsRunning)
 {
 	Console.WriteLine();
 
-	if (stack.Peek() == "Main Menu")
+	if (gameState.Peek() == "Main Menu")
 	{
 		MainMenu();
 	}
-	else if (stack.Peek() == "Settings")
+	else if (gameState.Peek() == "Settings")
 	{
 		SettingsMenu();
 	}
-	else if (stack.Peek().Contains("Level"))
+	else if (gameState.Peek().Contains("Level"))
 	{
 		LevelMenu();
 	}
@@ -27,8 +28,8 @@ void MainMenuSelection(int selection)
 {
 	if (selection == 1)
 	{
-		previousState = stack.Peek();
-		stack.Push("Settings");
+		stateHistory.Push(gameState.Peek());;
+		gameState.Push("Settings");
 	}
 	else if (selection == 2)
 	{
@@ -37,16 +38,16 @@ void MainMenuSelection(int selection)
 	}
 	else if (selection == 0)
 	{
-		previousState = stack.Peek();
-		stack.Push($"Level {stack.GetCount()}");
+		stateHistory.Push(gameState.Peek());
+		gameState.Push($"Level {gameState.GetCount()}");
 	}
 }
 
 void MainMenu()
 {
-	Console.WriteLine("You are here: " + stack.Peek());
+	Console.WriteLine("You are here: " + gameState.Peek());
 	Console.WriteLine("What do you want to do?");
-	Console.WriteLine($"0) Go to level {stack.GetCount()}");
+	Console.WriteLine($"0) Go to level {gameState.GetCount()}");
 	Console.WriteLine("1) Go to settings");
 	Console.WriteLine("2) Quit");
 	var selection = Convert.ToInt32(Console.ReadLine());
@@ -55,41 +56,50 @@ void MainMenu()
 
 void SettingsMenu()
 {
-	Console.WriteLine("You are here: " + stack.Peek());
+	Console.WriteLine("You are here: " + gameState.Peek());
 	Console.WriteLine("What do you want to do?");
 	Console.WriteLine("Any key) Go back to main menu");
 	var selection = Console.ReadKey();
-	stack.Pop();
+	gameState.Yeet();
+	stateHistory.Yeet();
 }
 
 void LevelMenuSelection(int selection)
 {
-	if (selection == 0)
+	switch (selection)
 	{
-		previousState = stack.Peek();
-		stack.Push($"Level {stack.GetCount()}");
-	}
-	else if (selection == 1)
-	{
-		while (stack.Peek() != "Main Menu")
+		case 0:
+			stateHistory.Push(gameState.Peek());
+			gameState.Push($"Level {gameState.GetCount()}");
+
+			break;
+		case 1:
 		{
-			stack.Pop();
+			while (gameState.Peek() != "Main Menu")
+			{
+				gameState.Yeet();
+				stateHistory.Yeet();
+			}
+
+			break;
 		}
-	}
-	else if (selection == 3)
-	{
-		stack.Pop();
-		previousState = stack.Peek();
+		case 2:
+
+			gameState.Yeet();
+			stateHistory.Yeet();
+
+			break;
 	}
 }
 
 void LevelMenu()
 {
-	Console.WriteLine("You are here: " + stack.Peek());
+	Console.WriteLine("You are here: " + gameState.Peek());
 	Console.WriteLine("What do you want to do?");
-	Console.WriteLine($"0) Go to Level {stack.GetCount()}");
+	Console.WriteLine($"0) Go to Level {gameState.GetCount()}");
 	Console.WriteLine("1) Go to Main Menu");
-	Console.WriteLine($"3) Go backwards to {previousState}");
+	Console.WriteLine($"2) Go backwards to {stateHistory.Peek()}");
+	
 	var selection = Convert.ToInt32(Console.ReadLine());
 	LevelMenuSelection(selection);
 }

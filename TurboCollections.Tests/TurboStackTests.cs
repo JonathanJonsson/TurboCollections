@@ -30,14 +30,14 @@ public class TurboStackTests
 		var stack = new TurboStack<int>();
 		stack.Push(5);
 		stack.Push(10);
-		stack.Pop();
+		stack.Yeet();
 		Assert.AreEqual(5, stack.Peek());
 	}
 
 	private void CheckForEmptyStack(TurboStack<int> stack)
 	{
 		Assert.Zero(stack.GetCount());
-		Assert.Throws<IndexOutOfRangeException>(() => stack.Pop());
+		Assert.Throws<IndexOutOfRangeException>(() => stack.Yeet());
 	}
 
 	[Test]

@@ -44,7 +44,7 @@ public class TurboStack<T>
 	}
 
 	// // returns the item on top of the stack and removes it at the same time.
-	public T? Pop()
+	public T? Yeet()
 	{
 		count--; // = Count-1
 		var objectToReturn = stack[count];

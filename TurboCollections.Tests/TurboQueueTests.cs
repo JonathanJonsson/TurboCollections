@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace TurboCollections.Tests;
 
@@ -31,15 +32,19 @@ public class TurboQueueTests
 	{
 		var queue = new TurboQueue<string>();
 		
-		
 		queue.Enqueue("Hello");
 		queue.Clear();	
 		Assert.AreEqual(default, queue.Peek());
-			
 		
 	}
-	
-	
+
+	[Test]
+	public void ThrowExceptionOnEmptyQueue()
+	{
+		var queue = new TurboQueue<string>();
+
+		Assert.Throws<Exception>(()=>queue.Dequeue());
+	}
 	
 	
 }

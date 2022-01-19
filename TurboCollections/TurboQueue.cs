@@ -27,7 +27,11 @@ public class TurboQueue<T>
 	// // returns the item in the front of the queue and removes it at the same time.
 	public T Dequeue()
 	{
-		
+		if (Count <= 0)
+		{
+			throw new Exception("Error: Queue is empty");
+		}
+		var firstQueueObject = queue[0];
 		
 		
 		

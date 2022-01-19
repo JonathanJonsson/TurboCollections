@@ -11,8 +11,11 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +70,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="1345bbe7-a760-47df-b176-25b72af2dbf0">
+  <component name="RunManager" selected=".NET Project.TurboQueueDebugger">
     <configuration name="CustomManagement" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -142,7 +145,8 @@
       <workItem from="1642491602762" duration="4275000" />
       <workItem from="1642498966260" duration="15477000" />
       <workItem from="1642523825497" duration="9347000" />
-      <workItem from="1642578577922" duration="7728000" />
+      <workItem from="1642578577922" duration="8392000" />
+      <workItem from="1642590488517" duration="337000" />
     </task>
     <servers />
   </component>

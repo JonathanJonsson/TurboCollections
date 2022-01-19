@@ -49,7 +49,14 @@ public class TurboQueueTests
 	[Test]
 	public void GetTheFirstElementFromQueueWhenDequeuing()
 	{
-		var queue = new TurboQueue<>()
-	}
+		var queue = new TurboQueue<string>();
+		queue.Enqueue("Hello");
+		queue.Enqueue("World");
+		string firstStringElement = queue.Dequeue();
+		Assert.AreEqual("Hello", firstStringElement);
+			
+			
+			
+	}	
 	
 }

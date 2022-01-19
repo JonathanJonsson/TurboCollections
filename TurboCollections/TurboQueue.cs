@@ -32,10 +32,17 @@ public class TurboQueue<T>
 			throw new Exception("Error: Queue is empty");
 		}
 		var firstQueueObject = queue[0];
+
+		for (int i = 0; i < Count-1; i++)
+		{
+			queue[i] = queue[i + 1];
+		}
+
+		queue[Count - 1] = default;
+		Count--;
 		
 		
-		
-		return default;
+		return firstQueueObject;
 	}
 	
 	//GOOD IMPLEMENTATION

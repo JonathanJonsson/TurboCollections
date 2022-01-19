@@ -7,19 +7,26 @@ public class TurboQueue<T>
 	
 	// returns the current amount of items contained in the stack.
 	public int Count { get; private set; }
-	public int QueueSize { get; private set; }
-	private T[] queue = Array.Empty<T>();
+	private T[] queue =Array.Empty<T>();
 	public int Offset { get; private set; }
+	public int write { get; private set; } = -1;
+	
+	
+	
 	
 	// // adds one item to the back of the queue.
 	public void Enqueue(T item)
 	{
 		EnsureQueueSize(Count+1); // if Count (=number of elements in array >= length --> resize)
-		//ADD NEW ITEM TO EMPTY SLOT Not necessarily to the end but first free after offset. ALso need to (if no free to the end of array, check the beginning all the way to the offset)
-		queue[Count++] = item;
- 
-		//Modulo 1%4 = 1; --> USE modulo to loop through array. compare array length with Count(?). Eg., array of size 4: Count%Items.length --> 0%4 = 0, 1%4=0, 2%4=2, 3%4=3, 4%4=0, 5%4=1....
 
+		// queue[Count++%queue.Length] = item;
+		// write = (Count++)%queue.Length;
+		write = (write+1)%queue.Length;
+
+		queue[write] = item;
+	 
+
+		Count++;
 	}
 	
 	// // returns the item in the front of the queue without removing it.
@@ -44,22 +51,15 @@ public class TurboQueue<T>
 		// }
 
 		queue[Offset] = default;
-		Offset++;
-		
+		Offset = (Offset + 1)%queue.Length;
+
 		Count--;
 		
 		return firstQueueObject;
 	}
 	
 	
-	
-	//GOOD IMPLEMENTATION
-	//START = offset - ok
-	//WHEN DEQUING, REMOVE FROM offset - ok
-	//WHEN ADDING, ADD TO THE END, IF FULL AFTER START POINT--> START CHECKING FROM INDEX=0 AND SEE IF FREE SLOTS
-	// ADD TO FREE SLOT INFRONT OF STARTER
-	// IF START REACHES END OF ARRAY --> USE MODULO TO RESET START TO INDEX =0
-	//IF ALL SLOTS ARE FULL (BOTH BEFORE AND AFTER START) EXPAND ARRAY, SORT SO THAT THE START (AND ALL ELEMENTS) ARE MOVED TO START AT INDEX=0, AND CONTINUE ADD TO THE END AS USUAL
+ 
 	
 	// // removes all items from the queue.
 	public void Clear()

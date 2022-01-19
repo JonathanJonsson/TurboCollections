@@ -9,12 +9,17 @@ public class TurboQueue<T>
 	public int Count { get; private set; }
 	public int QueueSize { get; private set; }
 	private T[] queue = Array.Empty<T>();
+	public int Offset { get; private set; }
 	
 	// // adds one item to the back of the queue.
 	public void Enqueue(T item)
 	{
-		EnsureQueueSize(Count+1);
+		EnsureQueueSize(Count+1); // if Count (=number of elements in array >= length --> resize)
+		//ADD NEW ITEM TO EMPTY SLOT Not necessarily to the end but first free after offset. ALso need to (if no free to the end of array, check the beginning all the way to the offset)
 		queue[Count++] = item;
+ 
+		//Modulo 1%4 = 1; --> USE modulo to loop through array. compare array length with Count(?). Eg., array of size 4: Count%Items.length --> 0%4 = 0, 1%4=0, 2%4=2, 3%4=3, 4%4=0, 5%4=1....
+
 	}
 	
 	// // returns the item in the front of the queue without removing it.
@@ -23,7 +28,7 @@ public class TurboQueue<T>
 		return queue[0];
 	}
 	
-	//POOR IMPLEMENTATION
+
 	// // returns the item in the front of the queue and removes it at the same time.
 	public T Dequeue()
 	{
@@ -31,23 +36,26 @@ public class TurboQueue<T>
 		{
 			throw new Exception("Error: Queue is empty");
 		}
-		var firstQueueObject = queue[0];
+		var firstQueueObject = queue[Offset];
 
-		for (int i = 0; i < Count-1; i++)
-		{
-			queue[i] = queue[i + 1];
-		}
+		// for (int i = 0; i < Count-1; i++)
+		// {
+		// 	queue[i] = queue[i + 1];
+		// }
 
-		queue[Count - 1] = default;
-		Count--;
+		queue[Offset] = default;
+		Offset++;
 		
+		Count--;
 		
 		return firstQueueObject;
 	}
 	
+	
+	
 	//GOOD IMPLEMENTATION
-	//FROMT = Offest + index points att start in array
-	//WHEN DEQUING, REMOVE FROM FRONT
+	//START = offset - ok
+	//WHEN DEQUING, REMOVE FROM offset - ok
 	//WHEN ADDING, ADD TO THE END, IF FULL AFTER START POINT--> START CHECKING FROM INDEX=0 AND SEE IF FREE SLOTS
 	// ADD TO FREE SLOT INFRONT OF STARTER
 	// IF START REACHES END OF ARRAY --> USE MODULO TO RESET START TO INDEX =0
@@ -81,7 +89,8 @@ public class TurboQueue<T>
 		{
 			tempQueue[i] = queue[i];
 		}
-
+		//SORT HERE SOMEWHERE
+		
 		queue = tempQueue;
 
 	}	

@@ -5,16 +5,26 @@ namespace TurboCollections.Tests;
 
 public class TurboQueueTests
 {
+	public class QueueCreation
+	{
+		[Test]
+		public void ThrowExceptionOnEmptyQueue()
+		{
+			var queue = new TurboQueue<string>();
+
+			Assert.Throws<Exception>(()=>queue.Dequeue());
+		}
+	}
+	
 	[Test]
-	public void EnqueueToQueueTest()
+	public void EnqueueToQueue()
 	{
 		var queue = new TurboQueue<string>();
 		
 		queue.Enqueue("Hello");
 		Assert.AreEqual(1, queue.Count);
 	}
-	
-	
+
 	[Test]
 	public void PeekOnFirstElement()
 	{
@@ -39,24 +49,23 @@ public class TurboQueueTests
 	}
 
 	[Test]
-	public void ThrowExceptionOnEmptyQueue()
-	{
-		var queue = new TurboQueue<string>();
-
-		Assert.Throws<Exception>(()=>queue.Dequeue());
-	}
-
-	[Test]
 	public void GetTheFirstElementFromQueueWhenDequeuing()
 	{
 		var queue = new TurboQueue<string>();
 		queue.Enqueue("Hello");
 		queue.Enqueue("World");
-		string firstStringElement = queue.Dequeue();
+		var firstStringElement = queue.Dequeue();
 		Assert.AreEqual("Hello", firstStringElement);
-			
-			
-			
-	}	
-	
+ 	
+	}
+	[Test]
+	public void OffsetPointsAtNextElementAfterDequeue()
+	{
+		var queue = new TurboQueue<int>();
+		queue.Enqueue(111);
+		queue.Enqueue(222);
+		queue.Dequeue();
+		
+		Assert.AreEqual(1, queue.Offset);
+	}
 }

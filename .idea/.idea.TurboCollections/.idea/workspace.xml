@@ -13,9 +13,10 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboStackTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboStackTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboStack.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +147,8 @@
       <workItem from="1642498966260" duration="15477000" />
       <workItem from="1642523825497" duration="9347000" />
       <workItem from="1642578577922" duration="8392000" />
-      <workItem from="1642590488517" duration="337000" />
+      <workItem from="1642590488517" duration="6906000" />
+      <workItem from="1642601992159" duration="3076000" />
     </task>
     <servers />
   </component>

@@ -2,10 +2,15 @@
 
 var queue = new TurboQueue<int>();
 
-queue.Enqueue(8);
-queue.Enqueue(0);
-queue.Enqueue(2);
+queue.Enqueue(111);
+queue.Enqueue(666);
+queue.Dequeue();
+queue.Enqueue(222);
+queue.Enqueue(333);
+queue.Enqueue(555);
 
-var returnedItem = queue.Dequeue();
+queue.Dequeue();
+
+queue.Enqueue(444);
 
 Console.WriteLine("-----DONE-----");

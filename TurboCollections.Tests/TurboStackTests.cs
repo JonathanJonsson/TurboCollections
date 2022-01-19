@@ -11,7 +11,7 @@ public class TurboStackTests
 		var stack = new TurboStack<int>();
 		var initialStackSize = stack.GetCount();
 		stack.Push(1);
-		Assert.True(stack.GetCount() > initialStackSize);
+		Assert.True(stack.GetCount() == initialStackSize+1);
 	}
 
 	[Test]

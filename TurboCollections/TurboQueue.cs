@@ -33,7 +33,11 @@ public class TurboQueue<T>
 	// // returns the item in the front of the queue without removing it.
 	public T Peek()
 	{
-		return queue[0];
+		if (Count <= 0)
+		{
+			throw new Exception("Exception: Stack is empty. Returning default value from empty slot");
+		}
+		return queue[Offset];
 	}
 	
 
@@ -61,12 +65,17 @@ public class TurboQueue<T>
 	// // removes all items from the queue.
 	public void Clear()
 	{
-		for (int i = 0; i < Count; i++)
+		for (int i = 0; i < queue.Length; i++)
 		{
 			queue[i] = default;
 		}
 
+		//reset Count
 		Count = 0;
+		//reset offset
+		Offset = 0;
+		//Default pos to write
+		write = -1;
 	}
 
 
@@ -85,28 +94,24 @@ public class TurboQueue<T>
 		//Copy to new array (repeating)
 		if (queue.Length > 0  )
 		{
-		
 			for (int i = 0; i < tempQueue.Length; i++)
 			{
 				tempQueue[i] = queue[i%Count];
-			}	
-			
-			
+			}
 		}
 
-		 
 			T[] ArrayBetweenBegginingAndOffset = new T[Offset];
 			//get first part of the array all the way to the offset
 			for (int i = 0; i < Offset; i++)
 			{
 				ArrayBetweenBegginingAndOffset[i] = tempQueue[i];  
 			}
-//	Shift all values from Offset to beginning of array
+			//	Shift all values from Offset to beginning of array
 			for (int i = 0; i < tempQueue.Length-Offset; i++)
 			{
 				tempQueue[i] = tempQueue[i + Offset];
 			}
-//Add the first part before offset as end part of array
+			//Add the first part before offset as end part of array
 			for (int i = 0; i < ArrayBetweenBegginingAndOffset.Length; i++)
 			{
 				tempQueue[tempQueue.Length-ArrayBetweenBegginingAndOffset.Length] = ArrayBetweenBegginingAndOffset[i];
@@ -120,7 +125,7 @@ public class TurboQueue<T>
 					tempQueue[i] = default;
 				}	
 			}
-
+			//So that the next index enters at the end of current series instead of restarting at index =0.
 			write = queue.Length - 1;
 			//Reset offset now that it has been put to the front of the array
 			Offset = 0;

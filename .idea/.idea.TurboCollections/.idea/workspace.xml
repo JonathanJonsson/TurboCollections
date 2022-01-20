@@ -62,7 +62,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.24065934" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.23778501" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -153,7 +153,7 @@
       <workItem from="1642621356353" duration="380000" />
       <workItem from="1642675350536" duration="747000" />
       <workItem from="1642680872379" duration="4469000" />
-      <workItem from="1642686543877" duration="12502000" />
+      <workItem from="1642686543877" duration="14190000" />
     </task>
     <servers />
   </component>

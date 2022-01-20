@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboCollections.Tests", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStateHistory", "GameStateHistory\GameStateHistory.csproj", "{B7CBF4F0-C99B-4F52-9102-DC2484D76F4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TurboQueueDebugger", "TurboQueueDebugger\TurboQueueDebugger.csproj", "{5C2004CF-E547-42A2-8856-67FC2A8354AE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debuggers", "Debuggers\Debuggers.csproj", "{5C2004CF-E547-42A2-8856-67FC2A8354AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,10 +11,14 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
+      <change afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedStackDebugger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/Debuggers.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a52b594732f8426d3f1d4a85aaebb561a8a1834abe49eea9e1821e6bb682e/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/43/b761cca9/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928523f08964492b10792127821f369a6464b88be5a48e8ce4aa6975f23538/Array.Enumerators.cs" root0="SKIP_HIGHLIGHTING" />
@@ -116,7 +121,7 @@
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
       <option name="RUNTIME_ARGUMENTS" value="" />
-      <option name="PROJECT_PATH" value="$PROJECT_DIR$/TurboQueueDebugger/TurboQueueDebugger.csproj" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/Debuggers/Debuggers.csproj" />
       <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
@@ -152,7 +157,8 @@
       <workItem from="1642609072208" duration="9359000" />
       <workItem from="1642621356353" duration="380000" />
       <workItem from="1642675350536" duration="747000" />
-      <workItem from="1642680872379" duration="3164000" />
+      <workItem from="1642680872379" duration="4469000" />
+      <workItem from="1642686543877" duration="2173000" />
     </task>
     <servers />
   </component>

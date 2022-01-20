@@ -73,9 +73,10 @@ public class TurboQueue<T>
 		//Copy to new array, where the numbers enqueued are repeating
 		if (queue.Length > 0)
 		{
-			for (var i = 0; i < tempQueue.Length; i++)
+			for (var i = 0; i < Count; i++)
 			{
-				tempQueue[i] = queue[i%Count];
+				tempQueue[i] = queue[i];
+
 			}
 		}
 
@@ -96,18 +97,9 @@ public class TurboQueue<T>
 		//Add the first part before offset as end part of array
 		for (var i = 0; i < arraySegmentBetweenZeroAndOffset.Length; i++)
 		{
-			tempQueue[tempQueue.Length - arraySegmentBetweenZeroAndOffset.Length] = arraySegmentBetweenZeroAndOffset[i];
+			tempQueue[queue.Length-1+i] = arraySegmentBetweenZeroAndOffset[i];
 		}
-
-		if (queue.Length > 0)
-		{
-			//for ease of debugging (and also good I think?) - Set default to copies that has not been enqueued 
-			for (var i = queue.Length; i < tempQueue.Length; i++)
-			{
-				tempQueue[i] = default;
-			}
-		}
-
+		
 		//So that the next index enters at the end of current series instead of restarting at index =0.
 		write = queue.Length - 1;
 

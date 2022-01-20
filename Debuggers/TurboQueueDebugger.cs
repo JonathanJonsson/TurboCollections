@@ -22,7 +22,7 @@ queue.Dequeue();
 queue.Dequeue(); 
 queue.Enqueue(10);
 queue.Clear();
-queue.Peek();
+// queue.Peek();
 
 queue.Enqueue(1);
 queue.Enqueue(2);
@@ -37,6 +37,7 @@ queue.Peek();
 queue.Enqueue(7);
 queue.Enqueue(8);
 queue.Enqueue(9);
+
 
 Console.WriteLine("-----DONE-----");
 

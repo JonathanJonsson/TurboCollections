@@ -28,7 +28,7 @@ public class TurboQueueTests
 	}
 
 	[Test]
-	public void CheckThatEmptyThrowsExceptionForEmptyStack()
+	public void CheckThatEmptyStackThrowsException()
 	{
 		var queue = new TurboQueue<string>();
 		
@@ -138,14 +138,4 @@ public class TurboQueueTests
 		Assert.AreEqual("and zebras", queue.Dequeue());
 	}
 
-	public class QueueCreation
-	{
-		[Test]
-		public void ThrowExceptionOnEmptyQueue()
-		{
-			var queue = new TurboQueue<string>();
-			
-			Assert.Throws<Exception>(() => queue.Dequeue());
-		}
-	}
 }

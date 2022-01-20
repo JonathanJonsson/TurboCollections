@@ -15,10 +15,8 @@
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debuggers/Debuggers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/Debuggers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboCollections.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboCollections.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboStackTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboStackTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,15 +43,16 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d82e70c4654f974cc6248aad1cee512afee4f94673ee55f686398dd368e0b9d3/Array.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9a52b594732f8426d3f1d4a85aaebb561a8a1834abe49eea9e1821e6bb682e/SimpleWorkItem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/43/b761cca9/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e3d8d2969c4d2f47fdb5382b19d0279bb07c63645c867e8c79f11f575b7ba9/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928523f08964492b10792127821f369a6464b88be5a48e8ce4aa6975f23538/Array.Enumerators.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f52b9d49264ef126bd48babdd8cc869dc58a767b364e767a9a1590a4916fd3/MethodWrapper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/60/1a243000/IEnumerator`1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/df71358f7b7337a1eee3a65abe6d678dd9a065e256b8cc3fd44a2949754/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/4c/db281812/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f52b9d49264ef126bd48babdd8cc869dc58a767b364e767a9a1590a4916fd3/MethodWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -68,7 +67,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.23778501" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.23472668" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -160,6 +159,8 @@
       <workItem from="1642675350536" duration="747000" />
       <workItem from="1642680872379" duration="4469000" />
       <workItem from="1642686543877" duration="16082000" />
+      <workItem from="1642713208090" duration="1551000" />
+      <workItem from="1642714883348" duration="119000" />
     </task>
     <servers />
   </component>

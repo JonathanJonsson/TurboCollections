@@ -17,6 +17,7 @@ public class TurboQueue<T>
 	// // adds one item to the back of the queue.
 	public void Enqueue(T item)
 	{
+		
 		EnsureQueueSize(Count+1); // if Count (=number of elements in array >= length --> resize)
 
 		// queue[Count++%queue.Length] = item;
@@ -90,7 +91,6 @@ public class TurboQueue<T>
 			tempQueue[i] = queue[i];
 		}
 		//SORT HERE SOMEWHERE
-		
 		queue = tempQueue;
 
 	}	

@@ -34,12 +34,12 @@ public class TurboLinkedStack<T>
 		private U data;
 		private Node<U> next;
 
-		public Node(U _data)
+		public Node(U _data) // first element
 		{
 			data = _data;
 		}
 
-		public Node(U _data, Node<U> _next) // for subsequent 
+		public Node(U _data, Node<U> _next) // for subsequent elements
 		{
 			data = _data;
 			next = _next;

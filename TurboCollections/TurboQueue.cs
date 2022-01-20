@@ -46,11 +46,7 @@ public class TurboQueue<T>
 		}
 		var firstQueueObject = queue[Offset];
 
-		// for (int i = 0; i < Count-1; i++)
-		// {
-		// 	queue[i] = queue[i + 1];
-		// }
-
+  
 		queue[Offset] = default;
 		Offset = (Offset + 1)%queue.Length;
 
@@ -86,11 +82,20 @@ public class TurboQueue<T>
 
 		T[] tempQueue = new T[newSize];
 
-		for (int i = 0; i < Count; i++)
+		if (queue.Length > 0  )
 		{
-			tempQueue[i] = queue[i];
+		
+			for (int i = 0; i < tempQueue.Length; i++)
+			{
+				tempQueue[i] = queue[i%Count];
+			}	
+			
+			
 		}
-		//SORT HERE SOMEWHERE
+
+ 
+		
+		
 		queue = tempQueue;
 
 	}	

@@ -82,6 +82,7 @@ public class TurboQueue<T>
 
 		T[] tempQueue = new T[newSize];
 
+		//Copy to new array (repeating)
 		if (queue.Length > 0  )
 		{
 		
@@ -93,9 +94,38 @@ public class TurboQueue<T>
 			
 		}
 
- 
+		 
+			T[] ArrayBetweenBegginingAndOffset = new T[Offset];
+			//get first part of the array all the way to the offset
+			for (int i = 0; i < Offset; i++)
+			{
+				ArrayBetweenBegginingAndOffset[i] = tempQueue[i];  
+			}
+//	Shift all values from Offset to beginning of array
+			for (int i = 0; i < tempQueue.Length-Offset; i++)
+			{
+				tempQueue[i] = tempQueue[i + Offset];
+			}
+//Add the first part before offset as end part of array
+			for (int i = 0; i < ArrayBetweenBegginingAndOffset.Length; i++)
+			{
+				tempQueue[tempQueue.Length-ArrayBetweenBegginingAndOffset.Length] = ArrayBetweenBegginingAndOffset[i];
+			}
+
+			if (queue.Length > 0)
+			{
+				//for ease of debugging (and also good I think?) - Set default to copies that has not been enqueued 
+				for (int i = queue.Length; i < tempQueue.Length; i++)
+				{
+					tempQueue[i] = default;
+				}	
+			}
+
+			write = queue.Length - 1;
+			//Reset offset now that it has been put to the front of the array
+			Offset = 0;
 		
-		
+
 		queue = tempQueue;
 
 	}	

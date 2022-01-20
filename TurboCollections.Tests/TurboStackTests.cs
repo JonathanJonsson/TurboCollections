@@ -9,8 +9,10 @@ public class TurboStackTests
 	public void AddingToStackIncreasesCount()
 	{
 		var stack = new TurboStack<int>();
+		
 		var initialStackSize = stack.GetCount();
 		stack.Push(1);
+		
 		Assert.True(stack.GetCount() == initialStackSize+1);
 	}
 
@@ -18,9 +20,11 @@ public class TurboStackTests
 	public void PeekReturnsLatestAddedValue()
 	{
 		var stack = new TurboStack<int>();
+		
 		stack.Push(2);
 		stack.Push(5);
 		stack.Push(8);
+		
 		Assert.AreEqual(8, stack.Peek());
 	}
 
@@ -28,9 +32,11 @@ public class TurboStackTests
 	public void WhenRemovingTheTopValueBecomesTheValueUnderThePreviousTopInStack()
 	{
 		var stack = new TurboStack<int>();
+		
 		stack.Push(5);
 		stack.Push(10);
 		stack.Yeet();
+		
 		Assert.AreEqual(5, stack.Peek());
 	}
 
@@ -44,11 +50,13 @@ public class TurboStackTests
 	public void ClearEmptiesTheStack()
 	{
 		var stack = new TurboStack<int>();
+		
 		stack.Push(2);
 		stack.Push(2);
 		stack.Push(2);
 		stack.Push(2);
 		stack.Clear();
+		
 		CheckForEmptyStack(stack);
 	}
 }

@@ -47,25 +47,20 @@ public class TurboLinkedStack<T>
 		}
 		return head.GetData();
 	}
-
-	public void LoopThroughListTest()
+	
+	public T Pop()
 	{
-		Node<T> n = head;
 
-		while (n != null)
+		if (head == null)
 		{
-			Console.WriteLine(n.GetData());
-			n = n.next;
+			throw new Exception("Error: Empty stack!");
 		}
-	}
-	
-	
-	public T Yeet()
-	{
-		
-		throw new NotImplementedException();
 
-
+		var topNode = head;
+		head = head.next;
+		Count--;
+		return topNode.GetData();
+		 
 	}
 
 

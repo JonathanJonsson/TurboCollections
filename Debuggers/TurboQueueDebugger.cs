@@ -7,7 +7,7 @@
 // queue.Enqueue(2);
 // queue.Enqueue(3);
 // queue.Enqueue(4);     
-// queue.Enqueue(5);
+// queue.Enqueue(5); 
 // queue.Peek();
 // queue.Enqueue(6);
 // queue.Dequeue(); 

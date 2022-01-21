@@ -48,7 +48,16 @@ public class TurboLinkedStack<T>
 		return head.GetData();
 	}
 
+	public void LoopThroughListTest()
+	{
+		Node<T> n = head;
 
+		while (n != null)
+		{
+			Console.WriteLine(n.GetData());
+			n = n.next;
+		}
+	}
 	
 	
 	public T Yeet()

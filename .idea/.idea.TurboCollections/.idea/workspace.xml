@@ -15,9 +15,10 @@
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debuggers/TurboLinkedStackDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedStackDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboQueueTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboQueue.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,13 +68,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.23472668" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.2342246" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="CognitiveComplexityAnalysisOptionPage" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Project.TurboQueueDebugger">
@@ -161,6 +162,8 @@
       <workItem from="1642686543877" duration="16082000" />
       <workItem from="1642713208090" duration="1551000" />
       <workItem from="1642714883348" duration="119000" />
+      <workItem from="1642750804274" duration="50000" />
+      <workItem from="1642750884715" duration="10868000" />
     </task>
     <servers />
   </component>

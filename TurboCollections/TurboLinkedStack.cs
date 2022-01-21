@@ -1,48 +1,76 @@
 ﻿namespace TurboCollections;
 
+public class Node<U>
+{
+	private U data;
+	public Node<U> next;
+		 
+	public Node(U _data)
+	{
+		data = _data;
+		next = null;
+	}
+
+	public U GetData()
+	{
+		return data;
+	}
+}
+
 public class TurboLinkedStack<T>
 {
-	public Node<T> head;
-	
-	
-	
+	private Node<T> head;
+	public int Count { get; private set; } = 0;
 	
 	public void Push(T item)
 	{
-		head = new Node<T>(item, head);
+		Count++;
+		
+		if (head == null)
+		{
+			head = new Node<T>(item);
+			return;
+		}
+		
+		var newNode = new Node<T>(item);
+		newNode.next = head;
 
+		head = newNode;
 	}
 
+	
 	public T Peek()
 	{
-		throw new NotImplementedException();
+		if (Count < 0)
+		{
+			throw new Exception("Exception: Trying to peek at empty linked stack but it is empty!");
+		}
+		return head.GetData();
 	}
 
+	public void LoopThroughListTest()
+	{
+		Node<T> n = head;
+
+		while (n != null)
+		{
+			Console.WriteLine(n.GetData());
+			n = n.next;
+		}
+	}
+	
+	
 	public T Yeet()
 	{
+		
 		throw new NotImplementedException();
+
+
 	}
 
 
 	public void Clear()
 	{
 		throw new NotImplementedException();
-	}
-
-	public class Node<U>
-	{
-		private U data;
-		private Node<U> next;
-
-		public Node(U _data) // first element
-		{
-			data = _data;
-		}
-
-		public Node(U _data, Node<U> _next) // for subsequent elements
-		{
-			data = _data;
-			next = _next;
-		}
 	}
 }

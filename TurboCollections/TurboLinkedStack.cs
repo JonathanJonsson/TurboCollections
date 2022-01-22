@@ -1,11 +1,11 @@
 ﻿namespace TurboCollections;
 
-public class Node<U>
+public class StackNode<U>
 {
 	private U data;
-	public Node<U> next;
+	public StackNode<U> next;
 		 
-	public Node(U _data)
+	public StackNode(U _data)
 	{
 		data = _data;
 		next = null;
@@ -19,7 +19,7 @@ public class Node<U>
 
 public class TurboLinkedStack<T>
 {
-	private Node<T> head;
+	private StackNode<T> head;
 	public int Count { get; private set; } = 0;
 	
 	public void Push(T item)
@@ -28,17 +28,16 @@ public class TurboLinkedStack<T>
 		
 		if (head == null)
 		{
-			head = new Node<T>(item);
+			head = new StackNode<T>(item);
 			return;
 		}
 		
-		var newNode = new Node<T>(item);
+		var newNode = new StackNode<T>(item);
 		newNode.next = head;
 
 		head = newNode;
 	}
 
-	
 	public T Peek()
 	{
 		if (Count < 0)
@@ -62,7 +61,6 @@ public class TurboLinkedStack<T>
 		return topNode.GetData();
 		 
 	}
-
 
 	public void Clear()
 	{

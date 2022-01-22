@@ -49,8 +49,17 @@ public class TurboLinkedStack_Tests
 		Assert.AreEqual(1, linkedStack.Count);
 		 
 	}
-	
-	
+
+	[Test]
+	public void PeekReturnsTopElement()
+	{
+		var linkedStack = new TurboLinkedStack<int>();
+		linkedStack.Push(4);
+		linkedStack.Push(9);
+		
+		Assert.AreEqual(9, linkedStack.Peek());
+
+	}
 	
 	
 	

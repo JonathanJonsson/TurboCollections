@@ -22,9 +22,19 @@ public class TurboLinkedStack_Tests
 		linkedStack.Push(1);
 		Assert.AreEqual(1, linkedStack.Count);
 	}
-	
-	
-	
+
+
+	[Test]
+	public void ClearEmptiesTheStack()
+	{
+		var linkedStack = new TurboLinkedStack<string>();
+		
+		linkedStack.Push("Hello");
+		linkedStack.Push("World");
+		linkedStack.Clear();
+		Assert.Zero(linkedStack.Count);
+		Assert.Zero(linkedStack.Count);
+	}
 	
 	
 	

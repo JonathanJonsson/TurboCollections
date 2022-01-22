@@ -66,6 +66,13 @@ public class TurboLinkedStack<T>
 
 	public void Clear()
 	{
-		throw new NotImplementedException();
+		while (head != null)
+		{
+			var prev = head.next;
+			head = null;
+			head = prev;
+		}
+
+		Count = 0;
 	}
 }

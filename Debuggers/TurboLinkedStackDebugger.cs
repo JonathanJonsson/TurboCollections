@@ -6,6 +6,8 @@ linkedStack.Push(1);
 linkedStack.Push(2);
 linkedStack.Push(3);
 linkedStack.Pop();
+linkedStack.Push(4);
+linkedStack.Clear();
 
 // linkedStack.Yeet();
 

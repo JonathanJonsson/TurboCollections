@@ -14,10 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
-      <change afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debuggers/Debuggers.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/Debuggers.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debuggers/TurboLinkedStackDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedStackDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.2342246" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.23372465" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -168,7 +166,8 @@
       <workItem from="1642799064035" duration="1909000" />
       <workItem from="1642883194313" duration="323000" />
       <workItem from="1642884535021" duration="3210000" />
-      <workItem from="1642940594002" duration="2851000" />
+      <workItem from="1642940594002" duration="6051000" />
+      <workItem from="1642960379420" duration="5926000" />
     </task>
     <servers />
   </component>
@@ -195,7 +194,9 @@
   <component name="XDebuggerManager">
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="Type#TurboCollections.QueueNode`1" memberName="next" />
         <PinnedItemInfo parentTag="Frame#TurboCollections.TurboStack`1.Push" memberName="tempStack" />
+        <PinnedItemInfo parentTag="Type#TurboCollections.TurboLinkedQueue`1" memberName="head" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>

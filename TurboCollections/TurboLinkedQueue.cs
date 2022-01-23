@@ -19,20 +19,23 @@ public class QueueNode<U>
 public class TurboLinkedQueue<T>
 {
 	private QueueNode<T> head;
+	private QueueNode<T> tail;
+
 	public int Count { get; private set; }
 
 	public void Enqueue(T item)
 	{		Count++;
 
-		if (head == null)
+		var newNode = new QueueNode<T>(item);
+		if (tail == null)
 		{
-			head = new QueueNode<T>(item);
-
+			head = tail = newNode;
 			return;
 		}
 
-		var newNode = new QueueNode<T>(item);
-		newNode.next = head;
+		tail.next = newNode;
+		tail = newNode;
+
 
 
 	}

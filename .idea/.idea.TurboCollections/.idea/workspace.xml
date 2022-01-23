@@ -14,12 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
-      <change afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboCollections.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboCollections.Tests.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedStack.Tests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedStack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,6 +165,7 @@
       <workItem from="1642799064035" duration="1909000" />
       <workItem from="1642883194313" duration="323000" />
       <workItem from="1642884535021" duration="3210000" />
+      <workItem from="1642940594002" duration="364000" />
     </task>
     <servers />
   </component>

@@ -19,9 +19,12 @@ public class QueueNode<U>
 public class TurboLinkedQueue<T>
 {
 	private QueueNode<T> head;
+	public int Count { get; private set; }
+
 	public void Enqueue(T item)
 	{
-		throw new NotImplementedException();
+		
+		Count++;
 	}
 
 	public void Dequeue()

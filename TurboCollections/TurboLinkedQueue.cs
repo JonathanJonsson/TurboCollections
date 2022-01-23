@@ -42,7 +42,8 @@ public class TurboLinkedQueue<T>
 
 	public void Dequeue()
 	{
-		throw new NotImplementedException();
+
+		Count--;
 
 	}
 

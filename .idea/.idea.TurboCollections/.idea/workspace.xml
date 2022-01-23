@@ -16,6 +16,7 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboLinkedQueue.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +168,7 @@
       <workItem from="1642883194313" duration="323000" />
       <workItem from="1642884535021" duration="3210000" />
       <workItem from="1642940594002" duration="6051000" />
-      <workItem from="1642960379420" duration="5926000" />
+      <workItem from="1642960379420" duration="6951000" />
     </task>
     <servers />
   </component>

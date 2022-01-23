@@ -22,9 +22,15 @@ public class TurboLinkedQueue<T>
 	public int Count { get; private set; }
 
 	public void Enqueue(T item)
-	{
+	{		Count++;
+
+		if (head == null)
+		{
+			head = new QueueNode<T>(item);
+
+			return;
+		}
 		
-		Count++;
 	}
 
 	public void Dequeue()
@@ -33,9 +39,13 @@ public class TurboLinkedQueue<T>
 
 	}
 
-	public void Peek()
+	public T Peek()
 	{
-		throw new NotImplementedException();
+		if (head == null)
+		{
+			throw new Exception("Exception: The Queue is empty!");
+		}
+		return head.GetData();
 
 	}
 

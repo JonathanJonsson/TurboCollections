@@ -2,7 +2,7 @@
 public class QueueNode<U>
 {
 	private U data;
-	public StackNode<U> next;
+	public QueueNode<U> next;
 		 
 	public QueueNode(U _data)
 	{
@@ -30,7 +30,11 @@ public class TurboLinkedQueue<T>
 
 			return;
 		}
-		
+
+		var newNode = new QueueNode<T>(item);
+		newNode.next = head;
+
+
 	}
 
 	public void Dequeue()

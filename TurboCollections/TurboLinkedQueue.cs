@@ -40,15 +40,19 @@ public class TurboLinkedQueue<T>
 
 	public T Dequeue()
 	{
-		
+		if (frontQueueNode == null)
+		{
+			throw new Exception("Exception: The Queue is empty!");
+		}
 		Count--;
 		var frontObject = frontQueueNode.GetData();
 
-		while (frontQueueNode.next != null)
+		frontQueueNode = frontQueueNode.next;
+
+		if (frontQueueNode == null)
 		{
-			frontQueueNode = frontQueueNode.next;
+			backQueueNode = null;
 		}
-		
 		
 		return frontObject;
 	}
@@ -65,6 +69,15 @@ public class TurboLinkedQueue<T>
 
 	public void Clear()
 	{
-		throw new NotImplementedException();
+		if (frontQueueNode == null)
+		{
+			throw new Exception("Exception: The Queue is empty!");
+		}
+
+		while (frontQueueNode?.next != null)
+		{
+			frontQueueNode = default;
+		}
+		 Count = 0;
 	}
 }

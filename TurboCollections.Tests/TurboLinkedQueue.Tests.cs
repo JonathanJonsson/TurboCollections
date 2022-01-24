@@ -64,7 +64,20 @@ public class TurboLinkedQueue_Tests
 		lQueue.Dequeue();
 		Assert.AreEqual(2, lQueue.Peek());
 	}
-	
+
+	[Test]
+	public void ClearEmptiesTheQueue()
+	{
+		var lQueue = new TurboLinkedQueue<int>();
+		lQueue.Enqueue(1);
+		lQueue.Enqueue(2);
+		lQueue.Enqueue(3);
+		
+		lQueue.Clear();
+		
+		Assert.Throws<Exception>(() => lQueue.Clear());
+ 
+	}
 	
 	
 }

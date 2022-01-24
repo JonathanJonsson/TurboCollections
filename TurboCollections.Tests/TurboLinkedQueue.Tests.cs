@@ -78,6 +78,17 @@ public class TurboLinkedQueue_Tests
 		Assert.Throws<Exception>(() => lQueue.Clear());
  
 	}
-	
-	
+
+	[Test]
+	public void ClearResetsCount()
+	{
+		var lQueue = new TurboLinkedQueue<int>();
+		lQueue.Enqueue(1);
+		lQueue.Enqueue(2);
+		lQueue.Enqueue(3);
+		
+		lQueue.Clear();
+		
+		Assert.Zero(lQueue.Count);
+	}
 }

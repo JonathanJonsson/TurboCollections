@@ -55,6 +55,16 @@ public class TurboLinkedQueue_Tests
 		Assert.AreEqual(4, lQueue.Dequeue());
 	}
 
+	[Test]
+	public void DequeueAdvancesQueueForward()
+	{
+		var lQueue = new TurboLinkedQueue<int>();
+		lQueue.Enqueue(1);
+		lQueue.Enqueue(2);
+		lQueue.Dequeue();
+		Assert.AreEqual(2, lQueue.Peek());
+	}
+	
 	
 	
 }

@@ -18,8 +18,8 @@ public class QueueNode<U>
 
 public class TurboLinkedQueue<T>
 {
-	private QueueNode<T> head;
-	private QueueNode<T> tail;
+	private QueueNode<T> frontQueueNode;
+	private QueueNode<T> backQueueNode;
 
 	public int Count { get; private set; }
 
@@ -27,33 +27,39 @@ public class TurboLinkedQueue<T>
 	{		Count++;
 
 		var newNode = new QueueNode<T>(item);
-		if (tail == null)
+		if (backQueueNode == null)
 		{
-			head = tail = newNode;
+			frontQueueNode = backQueueNode = newNode;
 			return;
 		}
 
-		tail.next = newNode;
-		tail = newNode;
-
-
+		backQueueNode.next = newNode;
+		backQueueNode = newNode;
 
 	}
 
-	public void Dequeue()
+	public T Dequeue()
 	{
-
+		
 		Count--;
+		var frontObject = frontQueueNode.GetData();
 
+		while (frontQueueNode.next != null)
+		{
+			frontQueueNode = frontQueueNode.next;
+		}
+		
+		
+		return frontObject;
 	}
 
 	public T Peek()
 	{
-		if (head == null)
+		if (frontQueueNode == null)
 		{
 			throw new Exception("Exception: The Queue is empty!");
 		}
-		return head.GetData();
+		return frontQueueNode.GetData();
 
 	}
 

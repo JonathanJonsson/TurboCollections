@@ -40,10 +40,21 @@ public class TurboLinkedQueue_Tests
 		var lQueue = new TurboLinkedQueue<int>();
 		lQueue.Enqueue(2);
 		lQueue.Enqueue(1);
-		var intialCount = lQueue.Count;
+		var initialCount = lQueue.Count;
 		lQueue.Dequeue();
-		Assert.AreEqual(intialCount-1, lQueue.Count);
+		Assert.AreEqual(initialCount-1, lQueue.Count);
 	}
+
+	[Test]
+	public void DequeueReturnsFirstObject()
+	{
+		var lQueue = new TurboLinkedQueue<int>();
+		lQueue.Enqueue(4);
+		lQueue.Enqueue(1);
+		
+		Assert.AreEqual(4, lQueue.Dequeue());
+	}
+
 	
 	
 }

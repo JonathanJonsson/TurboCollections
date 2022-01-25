@@ -14,13 +14,19 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
+      <change afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboSort.Tests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TurboCollections/TurboSort.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboLinkedQueue.Tests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -168,6 +174,9 @@
       <workItem from="1642940594002" duration="6051000" />
       <workItem from="1642960379420" duration="6951000" />
       <workItem from="1643036487569" duration="3602000" />
+      <workItem from="1643045927516" duration="119000" />
+      <workItem from="1643096745585" duration="1104000" />
+      <workItem from="1643112614399" duration="249000" />
     </task>
     <servers />
   </component>

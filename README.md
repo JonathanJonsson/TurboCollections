@@ -5,6 +5,7 @@
  -Stack
  -LinkedStack
  -LinkedQueue
+ -SelectionSort
  
  with corresponding set of tests.
  

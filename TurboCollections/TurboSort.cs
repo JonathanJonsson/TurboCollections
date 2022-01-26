@@ -8,11 +8,19 @@ public static class TurboSort
 		
 	}
 
-	private static int IndexOfMin(TurboList<int> list, int startIndex)
+	public static int IndexOfMin(TurboList<int> list, int startIndex)
 	{
 		var minIndex = startIndex;
+		var minList = list.Get(startIndex);
 
-
+		for (int i = 0; i < list.Count-1; i++)
+		{
+			if (list.Get(i) < minList)
+			{
+				minIndex = i;
+				minList = list.Get(i);
+			}
+		}
 
 		return minIndex;
 

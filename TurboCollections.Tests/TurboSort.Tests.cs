@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 
 namespace TurboCollections.Tests;
 
@@ -36,5 +37,26 @@ public class TurboSort_Tests
 		Assert.AreEqual(2, TurboSort.IndexOfMin(list, 0));
 		
 		
+	}
+
+	[Test]
+	public void ArraySortsFromSmallestToLargest()
+	{
+		var list = new TurboList<int>();
+
+		Random r = new Random();
+		
+		for (int i = 0; i < 100; i++)
+		{
+			list.Add(r.Next(0,101));
+		}
+		
+		TurboSort.TurboSelectionSort(list);
+
+		for (int i = 0; i < list.Count-1; i++)
+		{
+			Assert.GreaterOrEqual(list.Get(i+1), list.Get(i));
+			
+		}
 	}
 }

@@ -2,9 +2,12 @@
 
 
 var list = new TurboList<int>();
-
-list.Add(1);
-list.Add(3);
-list.Add(2);
+Random r = new Random();
+for (int i = 0; i < 10; i++)
+{
+	list.Add(r.Next(0,101));
+}
 
 TurboSort.TurboSelectionSort(list);
+
+Console.WriteLine("---Done---");

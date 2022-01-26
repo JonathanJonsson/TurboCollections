@@ -16,7 +16,6 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debuggers/TurboSortDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboSortDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboSort.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboSort.Tests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboSort.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +71,6 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.23372465" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -179,7 +177,7 @@
       <workItem from="1643096745585" duration="1104000" />
       <workItem from="1643112614399" duration="249000" />
       <workItem from="1643135618996" duration="595000" />
-      <workItem from="1643200036201" duration="7445000" />
+      <workItem from="1643200036201" duration="8882000" />
     </task>
     <servers />
   </component>

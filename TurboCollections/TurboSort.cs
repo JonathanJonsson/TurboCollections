@@ -44,6 +44,6 @@ public static class TurboSort
 		var temp = list.Get(firstIndex);
 		list.Set(firstIndex, list.Get(secondIndex)) ;
 		list.Set(secondIndex, temp);
-		Console.WriteLine($"Swaped: {temp} with {list.Get(firstIndex)}");
+		// Console.WriteLine($"Swaped: {temp} with {list.Get(firstIndex)}");
 	}
 }

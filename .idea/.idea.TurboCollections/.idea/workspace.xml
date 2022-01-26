@@ -14,9 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
-      <change afterPath="$PROJECT_DIR$/Debuggers/TurboSortDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboLinkedQueueDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboSort.Tests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboSort.Tests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboSort.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboSort.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +178,7 @@
       <workItem from="1643096745585" duration="1104000" />
       <workItem from="1643112614399" duration="249000" />
       <workItem from="1643135618996" duration="595000" />
-      <workItem from="1643200036201" duration="1757000" />
+      <workItem from="1643200036201" duration="2789000" />
     </task>
     <servers />
   </component>

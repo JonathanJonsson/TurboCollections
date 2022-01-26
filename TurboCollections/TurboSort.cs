@@ -20,8 +20,10 @@ public static class TurboSort
 
 	}
 
-	private static void SwapPositions(TurboList<int> list, int firstIndex, int SecondIndex)
+	public static void SwapPositions(TurboList<int> list, int firstIndex, int secondIndex)
 	{
-		
+		var temp = list.Get(firstIndex);
+		list.Set(firstIndex, list.Get(secondIndex)) ;
+		list.Set(secondIndex, temp);
 	}
 }

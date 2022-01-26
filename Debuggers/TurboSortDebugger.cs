@@ -1,37 +1,33 @@
 ﻿using System.Diagnostics;
 using TurboCollections;
 
-int numberOfListAdditions = 10000;
+var numberOfListAdditions = 10000;
 var randomList = new TurboList<int>();
 var reversedList = new TurboList<int>();
 var sortedList = new TurboList<int>();
-
-Random r = new Random();
+var r = new Random();
 
 #region Array Generation
-for (int i = 0; i < numberOfListAdditions; i++)
+for (var i = 0; i < numberOfListAdditions; i++)
 {
-	randomList.Add(r.Next(0,101));
+	randomList.Add(r.Next(0, numberOfListAdditions + 1));
 }
 
-for (int i = numberOfListAdditions; i > 0; i--)
+for (var i = numberOfListAdditions; i > 0; i--)
 {
 	reversedList.Add(i);
 }
 
-for (int i = 0; i < numberOfListAdditions; i++)
+for (var i = 0; i < numberOfListAdditions; i++)
 {
 	sortedList.Add(i);
 }
 #endregion
 
-
-Stopwatch stopwatch = new Stopwatch();
-
-
-
+var stopwatch = new Stopwatch();
 
 #region RandomArray
+Console.WriteLine("---Starting time logging---");
 stopwatch.Start();
 TurboSort.TurboSelectionSort(randomList);
 stopwatch.Stop();
@@ -59,13 +55,11 @@ ReportTime(stopwatch, "sorted array", "Selection sort");
 stopwatch.Reset();
 #endregion
 
-
-
 Console.WriteLine("---Done---");
 
-void ReportTime(Stopwatch _stopwatch, string listName, string sortingMethod)
+void ReportTime(Stopwatch _stopwatch, string _listName, string _sortingMethod)
 {
-	TimeSpan ts = _stopwatch.Elapsed;
-	string elapsedTime = String.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds/10);
-	Console.WriteLine($"RunTime for {listName} using {sortingMethod} " + elapsedTime);
+	var ts = _stopwatch.Elapsed;
+	var elapsedTime = string.Format("{0:00}:{1:00}:{2:00}.{3:00}", ts.Hours, ts.Minutes, ts.Seconds, ts.Milliseconds/10);
+	Console.WriteLine($"RunTime for {_listName} using {_sortingMethod} " + elapsedTime);
 }

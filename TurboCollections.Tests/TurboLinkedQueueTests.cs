@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace TurboCollections.Tests;
 
-public class TurboLinkedQueue_Tests
+public class TurboLinkedQueueTests
 {
 
 	[Test]

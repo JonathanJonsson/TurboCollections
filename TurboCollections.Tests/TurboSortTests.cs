@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace TurboCollections.Tests;
 
-public class TurboSort_Tests
+public class TurboSortTests
 {
 	[Test]
 	public void SwapTwoElementsWork() // requires Swap() to be public (for now) - is this internal test?

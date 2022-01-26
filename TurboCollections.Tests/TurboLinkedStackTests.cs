@@ -4,7 +4,7 @@ using NUnit.Framework;
 namespace TurboCollections.Tests;
 
  
-public class TurboLinkedStack_Tests
+public class TurboLinkedStackTests
 {
 
 	[Test]

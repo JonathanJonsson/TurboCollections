@@ -1,62 +1,102 @@
 ﻿using System.Diagnostics;
 using TurboCollections;
 
-var numberOfListAdditions = 100;
-var randomList = new TurboList<int>();
-var reversedList = new TurboList<int>();
-var sortedList = new TurboList<int>();
+var numberOfListAdditions = 10000;
+var randomListForSelectionSort = new TurboList<int>();
+var randomListForQuickSort = new TurboList<int>();
+var reversedListForSelectionSort = new TurboList<int>();
+var reversedListForQuickSort = new TurboList<int>();
+var sortedListForSelectionSort = new TurboList<int>();
+var sortedListForQuickSort = new TurboList<int>();
 var r = new Random();
 
-#region Array Generation
+#region List Generation
 for (var i = 0; i < numberOfListAdditions; i++)
 {
-	randomList.Add(r.Next(0, 101));
+	var randomNum = r.Next(0, 101);
+	randomListForSelectionSort.Add(randomNum);
+	randomListForQuickSort.Add(randomNum);
 }
 
 for (var i = numberOfListAdditions; i > 0; i--)
 {
-	reversedList.Add(i);
+	reversedListForSelectionSort.Add(i);
+	reversedListForQuickSort.Add(i);
 }
 
 for (var i = 0; i < numberOfListAdditions; i++)
 {
-	sortedList.Add(i);
+	sortedListForQuickSort.Add(i);
+	sortedListForSelectionSort.Add(i);
 }
 #endregion
 
 var stopwatch = new Stopwatch();
 
-TurboQuickSorting.TurboQuickSort(randomList, 0, randomList.Count - 1);
+#region RandomList - QuickSort
+Console.WriteLine("---Starting time logging - Quicksort---");
+stopwatch.Start();
+TurboQuickSorting.TurboQuickSort(randomListForSelectionSort,0, randomListForQuickSort.Count-1);
+stopwatch.Stop();
+ReportTime(stopwatch, "Random list", "Quick sort");
+stopwatch.Reset();
+#endregion
+
+Console.WriteLine();
+
+#region Reversed - QuickSort
+stopwatch.Start();
+TurboQuickSorting.TurboQuickSort(reversedListForQuickSort,0, randomListForQuickSort.Count-1);
+stopwatch.Stop();
+ReportTime(stopwatch, "Reversed list", "Quick sort");
+stopwatch.Reset();
+#endregion
+
+Console.WriteLine();
+
+#region Reversed - QuickSort
+stopwatch.Start();
+TurboQuickSorting.TurboQuickSort(sortedListForQuickSort,0, randomListForQuickSort.Count-1);
+stopwatch.Stop();
+ReportTime(stopwatch, "Sorted list", "Quick sort");
+stopwatch.Reset();
+#endregion
 
 
-// #region RandomArray
-// Console.WriteLine("---Starting time logging---");
-// stopwatch.Start();
-// TurboSelectionSorting.TurboSelectionSort(randomList);
-// stopwatch.Stop();
-// ReportTime(stopwatch, "Random array", "Selection sort");
-// stopwatch.Reset();
-// #endregion
-//
-// Console.WriteLine();
-//
-// #region ReversedArray
-// stopwatch.Start();
-// TurboSelectionSorting.TurboSelectionSort(reversedList);
-// stopwatch.Stop();
-// ReportTime(stopwatch, "Reversed array", "Selection sort");
-// stopwatch.Reset();
-// #endregion
-//
-// Console.WriteLine();
-//
-// #region SortedList
-// stopwatch.Start();
-// TurboSelectionSorting.TurboSelectionSort(sortedList);
-// stopwatch.Stop();
-// ReportTime(stopwatch, "sorted array", "Selection sort");
-// stopwatch.Reset();
-// #endregion
+Console.WriteLine();
+Console.WriteLine("----------------------------------------------------------------------");
+Console.WriteLine();
+
+#region RandomList - selectionsort
+Console.WriteLine("---Starting time logging - SelectionSort---");
+stopwatch.Start();
+TurboSelectionSorting.TurboSelectionSort(randomListForSelectionSort);
+stopwatch.Stop();
+ReportTime(stopwatch, "Random list", "Selection sort");
+stopwatch.Reset();
+#endregion
+
+Console.WriteLine();
+
+#region ReversedList - selectionsort
+stopwatch.Start();
+TurboSelectionSorting.TurboSelectionSort(reversedListForSelectionSort);
+stopwatch.Stop();
+ReportTime(stopwatch, "Reversed list", "Selection sort");
+stopwatch.Reset();
+#endregion
+
+Console.WriteLine();
+
+#region SortedList - selectionsort
+stopwatch.Start();
+TurboSelectionSorting.TurboSelectionSort(sortedListForSelectionSort);
+stopwatch.Stop();
+ReportTime(stopwatch, "sorted array", "Selection sort");
+stopwatch.Reset();
+#endregion
+
+
 
 Console.WriteLine("---Done---");
 

@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using TurboCollections;
 
-var numberOfListAdditions = 10000;
+var numberOfListAdditions = 100;
 var randomList = new TurboList<int>();
 var reversedList = new TurboList<int>();
 var sortedList = new TurboList<int>();
@@ -10,7 +10,7 @@ var r = new Random();
 #region Array Generation
 for (var i = 0; i < numberOfListAdditions; i++)
 {
-	randomList.Add(r.Next(0, numberOfListAdditions + 1));
+	randomList.Add(r.Next(0, 101));
 }
 
 for (var i = numberOfListAdditions; i > 0; i--)
@@ -26,34 +26,37 @@ for (var i = 0; i < numberOfListAdditions; i++)
 
 var stopwatch = new Stopwatch();
 
-#region RandomArray
-Console.WriteLine("---Starting time logging---");
-stopwatch.Start();
-TurboSort.TurboSelectionSort(randomList);
-stopwatch.Stop();
-ReportTime(stopwatch, "Random array", "Selection sort");
-stopwatch.Reset();
-#endregion
+TurboQuickSorting.TurboQuickSort(randomList, 0, randomList.Count - 1);
 
-Console.WriteLine();
 
-#region ReversedArray
-stopwatch.Start();
-TurboSort.TurboSelectionSort(reversedList);
-stopwatch.Stop();
-ReportTime(stopwatch, "Reversed array", "Selection sort");
-stopwatch.Reset();
-#endregion
-
-Console.WriteLine();
-
-#region SortedList
-stopwatch.Start();
-TurboSort.TurboSelectionSort(sortedList);
-stopwatch.Stop();
-ReportTime(stopwatch, "sorted array", "Selection sort");
-stopwatch.Reset();
-#endregion
+// #region RandomArray
+// Console.WriteLine("---Starting time logging---");
+// stopwatch.Start();
+// TurboSelectionSorting.TurboSelectionSort(randomList);
+// stopwatch.Stop();
+// ReportTime(stopwatch, "Random array", "Selection sort");
+// stopwatch.Reset();
+// #endregion
+//
+// Console.WriteLine();
+//
+// #region ReversedArray
+// stopwatch.Start();
+// TurboSelectionSorting.TurboSelectionSort(reversedList);
+// stopwatch.Stop();
+// ReportTime(stopwatch, "Reversed array", "Selection sort");
+// stopwatch.Reset();
+// #endregion
+//
+// Console.WriteLine();
+//
+// #region SortedList
+// stopwatch.Start();
+// TurboSelectionSorting.TurboSelectionSort(sortedList);
+// stopwatch.Stop();
+// ReportTime(stopwatch, "sorted array", "Selection sort");
+// stopwatch.Reset();
+// #endregion
 
 Console.WriteLine("---Done---");
 

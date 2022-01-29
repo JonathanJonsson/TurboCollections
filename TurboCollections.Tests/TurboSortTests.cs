@@ -15,7 +15,7 @@ public class TurboSortTests
 		
 		Assert.AreEqual(1, list.Get(0));
 		
-		TurboSort.SwapPositions(list,1,0);
+		TurboSelectionSorting.SwapPositions(list,1,0);
 		
 		Assert.AreEqual(2, list.Get(0));
 		
@@ -34,7 +34,7 @@ public class TurboSortTests
 		list.Add(-9);
 		list.Add(87);
 		
-		Assert.AreEqual(2, TurboSort.IndexOfMin(list, 0));
+		Assert.AreEqual(2, TurboSelectionSorting.IndexOfMin(list, 0));
 		
 		
 	}
@@ -51,7 +51,7 @@ public class TurboSortTests
 			list.Add(r.Next(0,101));
 		}
 		
-		TurboSort.TurboSelectionSort(list);
+		TurboSelectionSorting.TurboSelectionSort(list);
 
 		for (int i = 0; i < list.Count-1; i++)
 		{

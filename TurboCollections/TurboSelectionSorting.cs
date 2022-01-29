@@ -1,6 +1,6 @@
 ﻿namespace TurboCollections;
 
-public static class TurboSort
+public static class TurboSelectionSorting
 {
 	public static void TurboSelectionSort(TurboList<int> list)
 	{

@@ -2,21 +2,23 @@
 
 public class TurboBinarySearchTree
 {
-	private Tree root;
-
-	public void Insert(int value)
+	public Tree root;
+	
+	#region WITHOUT RECURSION (No delete implemented cause it is kicking my ass for some reason
+	public void InsertIterative(int value)
 	{
 		// var newNode = new Tree();
-		
-		if (this.root == null)
+
+		if (root == null)
 		{
-			this.root = new Tree();
-			this.root.value = value;
+			root = new Tree();
+			root.value = value;
 
 			return;
 		}
 
-		var newRoot = this.root;
+		var newRoot = root;
+
 		while (newRoot != null)
 		{
 			if (value > newRoot.value)
@@ -27,13 +29,9 @@ public class TurboBinarySearchTree
 					newRoot.right.value = value;
 
 					break;
+				}
 
-				}
-				else
-				{
-					newRoot = newRoot.right;
-					
-				}
+				newRoot = newRoot.right;
 			}
 			else
 			{
@@ -44,16 +42,13 @@ public class TurboBinarySearchTree
 
 					break;
 				}
-				else
-				{
-					newRoot = newRoot.left;
-					
-				}
+
+				newRoot = newRoot.left;
 			}
 		}
 	}
 
-	public Tree Search(int searchVal)
+	public Tree SearchIterative(int searchVal)
 	{
 		if (root.value == searchVal)
 		{
@@ -62,8 +57,7 @@ public class TurboBinarySearchTree
 
 		var newNode = root;
 
-		
-		while (newNode != null && searchVal!= newNode.value)
+		while (newNode != null && searchVal != newNode.value)
 		{
 			if (searchVal > newNode.value)
 			{
@@ -75,33 +69,23 @@ public class TurboBinarySearchTree
 				//goto left subtree
 				newNode = newNode.left;
 			}
-	
-			
 		}
+
 		if (newNode != null)
 		{
 			return newNode;
 		}
+
 		return null;
 	}
 
-
-	public void Delete(int value)
+	public void DeleteIterative(int value)
 	{
+		 
 		
-		root = Search(value);
 
-		if (root.right == null || root.left == null)
-		{
-			root = null;
-		}
-		// var rootToCheck = Search(value);
-		//
-		// if (rootToCheck.right == null && rootToCheck.left == null)
-		// {
-		// 	rootToCheck = null;
-		// }
 	}
+	#endregion
 }
 public class Tree
 {

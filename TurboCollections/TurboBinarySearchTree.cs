@@ -2,7 +2,7 @@
 
 public class TurboBinarySearchTree
 {
-	private Tree root;
+	public Tree root; //temp public for tests
 
 	#region WITH RECURSION
 	public void Insert(int value)

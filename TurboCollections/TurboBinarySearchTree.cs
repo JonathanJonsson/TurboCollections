@@ -44,7 +44,7 @@ public class TurboBinarySearchTree
 
 	private Tree SearchRec(Tree root, int searchVal)
 	{
-		if (root.value == searchVal || root == null)
+		if (root == null||root.value == searchVal )
 		{
 			return root;
 		}

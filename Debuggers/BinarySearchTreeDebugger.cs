@@ -1,23 +1,50 @@
-﻿using TurboCollections;
+﻿using System.Diagnostics;
+using TurboCollections;
 
- 
-
- 
-	var BST = new TurboBinarySearchTree();
-
-	BST.Insert(1);
-	BST.Insert(2);
-	BST.Insert(-1);
-	BST.Insert(3);
-	
-	// BST.SearchIterative(2);
-	var subTree = BST.Search(2);
-	
-	
-	
-	// BST.Search(1);
-	// var subTree = BST.SearchIterative(2);
-	// var subTreeValue = subTree.value;
-	// subTree.value = 10; //--feels bad taht main tree is changed here
-	// var subTreeValueChange = subTree.value;
-	Console.WriteLine("---DONE---");
+var BSTRecMethods = new TurboBinarySearchTree();
+var BSTIterativeMethods = new TurboBinarySearchTree();
+// var stopwatch = new Stopwatch();
+//
+// stopwatch.Start();
+// BSTIterativeMethods.InsertIterative(1);
+// BSTIterativeMethods.InsertIterative(2);
+// BSTIterativeMethods.InsertIterative(-1);
+// BSTIterativeMethods.InsertIterative(3);
+// stopwatch.Stop();
+// Console.WriteLine("Iterative insert time: " + stopwatch.Elapsed);
+// stopwatch.Reset();
+//
+// stopwatch.Start();
+// BSTRecMethods.Insert(1);
+// BSTRecMethods.Insert(2);
+// BSTRecMethods.Insert(-1);
+// BSTRecMethods.Insert(3);
+// stopwatch.Stop();
+// Console.WriteLine("Recursive insert time: " + stopwatch.Elapsed);
+// stopwatch.Reset();
+//
+// Console.WriteLine("------------------------");
+// stopwatch.Start();
+//
+// var subtreeIt = BSTIterativeMethods.SearchIterative(2);
+// stopwatch.Stop();
+// Console.WriteLine("Iterative search time: " + stopwatch.Elapsed);
+// stopwatch.Reset();
+//
+// stopwatch.Start();
+// var subTreeRec = BSTRecMethods.Search(2);
+// stopwatch.Stop();
+// Console.WriteLine("Recursive search time: " + stopwatch.Elapsed);
+// stopwatch.Reset();
+BSTIterativeMethods.InsertIterative(5);
+BSTIterativeMethods.InsertIterative(7);
+BSTIterativeMethods.InsertIterative(6);
+BSTIterativeMethods.InsertIterative(4);
+BSTIterativeMethods.InsertIterative(8);
+BSTIterativeMethods.Delete(5);
+// BST.Search(1);
+// var subTree = BST.SearchIterative(2);
+// var subTreeValue = subTree.value;
+// subTree.value = 10; //--feels bad that main tree is changed here
+// var subTreeValueChange = subTree.value;
+Console.WriteLine("---DONE---");

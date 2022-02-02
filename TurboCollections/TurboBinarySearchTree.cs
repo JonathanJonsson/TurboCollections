@@ -54,9 +54,72 @@ public class TurboBinarySearchTree
 
 		return SearchRec(root.left, searchVal);
 	}
+
+	public void Delete(int value)
+	{
+		DeleteRec(root, value);
+	}
+
+	private Tree DeleteRec(Tree root, int value)
+	{
+		if (root == null)
+		{
+			return root;
+		}
+		
+		if (value == root.value)
+		{
+			//If leaf
+			if (root.left == null && root.right == null)
+			{
+				root = null;
+			} 
+			//2 child node
+			else if (root.right != null && root.left != null)
+			{var temp = root.right;
+
+				while (temp.left != null)
+				{
+					temp = temp.left;
+				}
+
+				root.value = temp.value;
+				DeleteRec(root.right, temp.value);
+				
+			}
+			//1 child nodes
+			else
+			{
+				
+				if (root.left != null)
+				{
+					var child = root.left;
+					root = child;
+				}
+				else
+				{
+					var child = root.right;
+					root = child;
+				}
+			}
+		//value != root.value
+		} else if (value > root.value)
+		{
+			root.right = DeleteRec(root.right, value);
+		}
+		else
+		{
+			root.left = DeleteRec(root.left, value);
+		}
+
+ 
+		return root;
+
+
+	}
 	#endregion
 
-	#region WITHOUT RECURSION (No delete implemented cause it is kicking my ass for some reason
+	#region WITHOUT RECURSION (No delete implemented cause it is kicking my ass for some reason)
 	public void InsertIterative(int value)
 	{
 		// var newNode = new Tree();
@@ -133,6 +196,8 @@ public class TurboBinarySearchTree
 
 	public void DeleteIterative(int value)
 	{
+			
+	
 	}
 	#endregion
 }

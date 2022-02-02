@@ -75,8 +75,36 @@ public class TurboBinarySearchTreeTests
  
 	}
 
-	
-	
-	
+	[Test]
+	public void DeleteNodeWithTwoChildren()
+	{
+		var BST = new TurboBinarySearchTree();
+
+		BST.Insert(5);
+		BST.Insert(2);
+		BST.Insert(10);
+		BST.Insert(9);
+		BST.Insert(11);
+		BST.Delete(10);
+		Assert.IsNull(BST.Search(10));
+		Assert.AreEqual(9, BST.Search(9).value);
+		Assert.AreEqual(11, BST.Search(11).value);
+		
+	}
+
+	//HOW DO THESE TESTR? NEED IENUMERABLE
+	// [Test]
+	// public void GetInOrderCheck()
+	// {
+	// 	var BST = new TurboBinarySearchTree();
+	//
+	// 	BST.Insert(5);
+	// 	BST.Insert(2);
+	// 	BST.Insert(10);
+	// 	BST.Insert(9);
+	// 	BST.Insert(11);
+	// 	CollectionAssert.IsOrdered(BST);
+	// }
+	//
 	
 }

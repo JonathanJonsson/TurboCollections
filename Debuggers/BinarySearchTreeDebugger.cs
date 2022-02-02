@@ -53,7 +53,7 @@ BSTIterativeMethods.GetReversedOrder();
 Console.WriteLine("-------------------------");
 
 
-BSTIterativeMethods.Delete(11); // bugged delete function!
+BSTIterativeMethods.Delete(11); 
 
 BSTIterativeMethods.GetInOrder();
 Console.WriteLine("-------------------------");

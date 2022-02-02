@@ -62,14 +62,22 @@ public class TurboBinarySearchTree
 	{
 		DeleteRec(root, value);
 	}
-
+	private Tree GoLeftToMaxValue(Tree node)
+	{
+		while (node.left != null)
+		{
+			node = node.left;
+		}
+		return node;
+	}
 	private Tree DeleteRec(Tree root, int value)
 	{
+
 		if (root == null)
 		{
 			return root;
 		}
-
+		
 		if (value == root.value)
 		{
 			//If leaf
@@ -80,16 +88,10 @@ public class TurboBinarySearchTree
 			//2 child node
 			else if (root.right != null && root.left != null)
 			{
-				var temp = root.right; // temp node goes 1 step to the right (right subbranch)
-
-				while (temp.left != null) //go to the left until we are at the leftmost one
-				{
-					temp = temp.left; //(Move left)
-				}
-				
-				//TODO: BUG HERE I THINK
-				root.value = temp.value; // set root value to leftmost value
-				DeleteRec(root.right, temp.value);  // start from right subbranch of root and delete copied value.
+					var tempRoot = GoLeftToMaxValue(root.right);
+						//copy the value
+						root.value = tempRoot.value;
+						root.right = DeleteRec(root.right, tempRoot.value);
 			}
 			//1 child nodes
 			else
@@ -115,7 +117,7 @@ public class TurboBinarySearchTree
 		{
 			root.left = DeleteRec(root.left, value);
 		}
-
+		
 		return root;
 	}
 	#endregion

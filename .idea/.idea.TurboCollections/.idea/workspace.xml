@@ -14,7 +14,8 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
-      <change afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboBinarySearchTreeTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboBinarySearchTreeTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboBinarySearchTreeTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +187,7 @@
       <workItem from="1643701911768" duration="15659000" />
       <workItem from="1643739238802" duration="6500000" />
       <workItem from="1643788488748" duration="20385000" />
-      <workItem from="1643821964456" duration="353000" />
+      <workItem from="1643821964456" duration="1003000" />
     </task>
     <servers />
   </component>

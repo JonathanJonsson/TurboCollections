@@ -59,10 +59,22 @@ public class TurboBinarySearchTreeTests
 		BST.Delete(10);
 		Assert.IsNull(BST.Search(10));
 	}
-	
-	
-	
-	
+
+	[Test]
+	public void DeleteNodeWithOneChild()
+	{
+		var BST = new TurboBinarySearchTree();
+
+		BST.Insert(5);
+		BST.Insert(2);
+		BST.Insert(10);
+		BST.Insert(9);
+		BST.Delete(10);
+		Assert.IsNull(BST.Search(10));
+		Assert.AreEqual(9, BST.Search(9).value);
+ 
+	}
+
 	
 	
 	

@@ -66,17 +66,18 @@ public class TurboBinarySearchTree
 		{
 			return root;
 		}
-		
+
 		if (value == root.value)
 		{
 			//If leaf
 			if (root.left == null && root.right == null)
 			{
 				root = null;
-			} 
+			}
 			//2 child node
 			else if (root.right != null && root.left != null)
-			{var temp = root.right;
+			{
+				var temp = root.right;
 
 				while (temp.left != null)
 				{
@@ -85,12 +86,10 @@ public class TurboBinarySearchTree
 
 				root.value = temp.value;
 				DeleteRec(root.right, temp.value);
-				
 			}
 			//1 child nodes
 			else
 			{
-				
 				if (root.left != null)
 				{
 					var child = root.left;
@@ -102,8 +101,9 @@ public class TurboBinarySearchTree
 					root = child;
 				}
 			}
-		//value != root.value
-		} else if (value > root.value)
+			//value != root.value
+		}
+		else if (value > root.value)
 		{
 			root.right = DeleteRec(root.right, value);
 		}
@@ -112,10 +112,7 @@ public class TurboBinarySearchTree
 			root.left = DeleteRec(root.left, value);
 		}
 
- 
 		return root;
-
-
 	}
 	#endregion
 
@@ -196,10 +193,25 @@ public class TurboBinarySearchTree
 
 	public void DeleteIterative(int value)
 	{
-			
-	
 	}
 	#endregion
+
+	public void GetInOrder()
+	{
+		GetInOrder(root);
+	}
+
+	private void GetInOrder(Tree node)
+	{
+		if (node == null)
+		{
+			return;
+		}
+
+		GetInOrder(node.left);
+		Console.WriteLine(node.value);
+		GetInOrder(node.right);
+	}
 }
 public class Tree
 {

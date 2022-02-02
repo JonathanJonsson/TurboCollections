@@ -1,8 +1,44 @@
 ﻿namespace TurboCollections;
 
-//implemented with some pseudocode help from: https://www.geeksforgeeks.org/quick-sort/
-public static class TurboQuickSorting
+public static class TurboSorting
 {
+	public static void TurboSelectionSort(TurboList<int> list)
+	{
+		int minIndex;
+
+		for (int startIndex = 0; startIndex < list.Count; startIndex++)
+		{
+			minIndex = IndexOfMin(list, startIndex);
+			
+			if(list.Get(minIndex) == list.Get(startIndex))  
+				continue;
+			
+			SwapPositions(list,minIndex,startIndex);
+		}
+		
+
+	}
+
+	public static int IndexOfMin(TurboList<int> list, int startIndex)
+	{
+		var minIndex = startIndex;
+		var minList = list.Get(startIndex);
+
+		for (int i = minIndex+1; i < list.Count; i++)
+		{
+			if (list.Get(i) < minList)
+			{
+				minIndex = i;
+				minList = list.Get(i);
+			}
+		}
+
+		return minIndex;
+
+
+
+	}
+
 	public static void TurboQuickSort(TurboList<int> list, int left, int right)
 	{
 		if (left < right)
@@ -40,7 +76,7 @@ public static class TurboQuickSorting
 		return i + 1;
 	}
 
-	private static void SwapPositions(TurboList<int> list, int firstIndex, int secondIndex)
+	public static void SwapPositions(TurboList<int> list, int firstIndex, int secondIndex)
 	{
 		var temp = list.Get(firstIndex);
 		list.Set(firstIndex, list.Get(secondIndex));

@@ -10,26 +10,28 @@ public class TurboBinarySearchTree
 		root = InsertRecursive(root, value);
 	}
 
-	private Tree InsertRecursive(Tree root, int value)
+	private Tree InsertRecursive(Tree node, int value)
 	{
-		if (root == null)
+		//if the root is null --> create new Node
+		if (node == null)
 		{
-			root = new Tree();
-			root.value = value;
+			node = new Tree();
+			node.value = value;
 
-			return root;
+			return node;
+		}
+		
+		//if value > node value --> go to the right
+		if (value > node.value)
+		{
+			node.right = InsertRecursive(node.right, value);
+		}
+		else // go to left
+		{
+			node.left = InsertRecursive(node.left, value);
 		}
 
-		if (value > root.value)
-		{
-			root.right = InsertRecursive(root.right, value);
-		}
-		else
-		{
-			root.left = InsertRecursive(root.left, value);
-		}
-
-		return root;
+		return node;
 	}
 
 	public Tree Search(int searchValue)
@@ -49,9 +51,10 @@ public class TurboBinarySearchTree
 
 		if (searchVal > root.value)
 		{
+			//pass in right node to "continue searching from the node to the right of the current one"
 			return SearchRec(root.right, searchVal);
 		}
-
+		//if not right was chosen --> choose left
 		return SearchRec(root.left, searchVal);
 	}
 
@@ -77,15 +80,16 @@ public class TurboBinarySearchTree
 			//2 child node
 			else if (root.right != null && root.left != null)
 			{
-				var temp = root.right;
+				var temp = root.right; // temp node goes 1 step to the right (right subbranch)
 
-				while (temp.left != null)
+				while (temp.left != null) //go to the left until we are at the leftmost one
 				{
-					temp = temp.left;
+					temp = temp.left; //(Move left)
 				}
-
-				root.value = temp.value;
-				DeleteRec(root.right, temp.value);
+				
+				//TODO: BUG HERE I THINK
+				root.value = temp.value; // set root value to leftmost value
+				DeleteRec(root.right, temp.value);  // start from right subbranch of root and delete copied value.
 			}
 			//1 child nodes
 			else

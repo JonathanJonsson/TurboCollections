@@ -45,7 +45,8 @@ BSTIterativeMethods.InsertIterative(11);
 BSTIterativeMethods.InsertIterative(8);
 BSTIterativeMethods.InsertIterative(15);
 BSTIterativeMethods.GetInOrder();
-
+Console.WriteLine("----------------------");
+BSTIterativeMethods.GetReversedOrder();
 
 
 // BSTIterativeMethods.Delete(5);

@@ -190,27 +190,43 @@ public class TurboBinarySearchTree
 
 		return null;
 	}
-
-	public void DeleteIterative(int value)
-	{
-	}
+	//
+	// public void DeleteIterative(int value)
+	// {
+	// }
 	#endregion
 
 	public void GetInOrder()
 	{
-		GetInOrder(root);
+		GetEnumerator(root);
 	}
 
-	private void GetInOrder(Tree node)
+	public void GetReversedOrder()
+	{
+		GetReversedOrder(root);
+	}
+	private void GetReversedOrder(Tree node)
+	{
+		if (node == null)
+		{
+			return;
+		}
+		
+		GetReversedOrder(node.right);
+		Console.WriteLine(node.value);
+		GetReversedOrder(node.left);
+		
+	}
+	private void GetEnumerator(Tree node)
 	{
 		if (node == null)
 		{
 			return;
 		}
 
-		GetInOrder(node.left);
+		GetEnumerator(node.left);
 		Console.WriteLine(node.value);
-		GetInOrder(node.right);
+		GetEnumerator(node.right);
 	}
 }
 public class Tree

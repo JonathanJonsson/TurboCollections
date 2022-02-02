@@ -51,6 +51,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/43/b761cca9/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e3d8d2969c4d2f47fdb5382b19d0279bb07c63645c867e8c79f11f575b7ba9/Math.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56996bd5b7b025988834f7db72d610de6637f12f9a6dc6f25950f7f158ef3fc4/ConsolePal.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928523f08964492b10792127821f369a6464b88be5a48e8ce4aa6975f23538/Array.Enumerators.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/60/1a243000/IEnumerator`1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -76,7 +77,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.47619048" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.33621517" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -187,7 +188,7 @@
       <workItem from="1643450069626" duration="8936000" />
       <workItem from="1643701911768" duration="15659000" />
       <workItem from="1643739238802" duration="6500000" />
-      <workItem from="1643788488748" duration="15772000" />
+      <workItem from="1643788488748" duration="17458000" />
     </task>
     <servers />
   </component>
@@ -220,19 +221,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Debuggers/BinarySearchTreeDebugger.cs</url>
-          <line>45</line>
-          <properties documentPath="C:\Projects\Algorithms and data class\TurboCollections\Debuggers\BinarySearchTreeDebugger.cs" initialLine="45" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="1463" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1503" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

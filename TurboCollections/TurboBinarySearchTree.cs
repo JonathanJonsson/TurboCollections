@@ -2,8 +2,60 @@
 
 public class TurboBinarySearchTree
 {
-	public Tree root;
-	
+	private Tree root;
+
+	#region WITH RECURSION
+	public void Insert(int value)
+	{
+		root = InsertRecursive(root, value);
+	}
+
+	private Tree InsertRecursive(Tree root, int value)
+	{
+		if (root == null)
+		{
+			root = new Tree();
+			root.value = value;
+
+			return root;
+		}
+
+		if (value > root.value)
+		{
+			root.right = InsertRecursive(root.right, value);
+		}
+		else
+		{
+			root.left = InsertRecursive(root.left, value);
+		}
+
+		return root;
+	}
+
+	public Tree Search(int searchValue)
+	{
+		var tempRoot = root;
+		tempRoot = SearchRec(tempRoot, searchValue);
+
+		return tempRoot;
+	}
+
+	private Tree SearchRec(Tree root, int searchVal)
+	{
+		if (root.value == searchVal || root == null)
+		{
+			return root;
+		}
+
+		if (searchVal > root.value)
+		{
+			return SearchRec(root.right, searchVal);
+		}
+
+		return SearchRec(root.left, searchVal);
+	}
+	#endregion
+
 	#region WITHOUT RECURSION (No delete implemented cause it is kicking my ass for some reason
 	public void InsertIterative(int value)
 	{
@@ -81,9 +133,6 @@ public class TurboBinarySearchTree
 
 	public void DeleteIterative(int value)
 	{
-		 
-		
-
 	}
 	#endregion
 }

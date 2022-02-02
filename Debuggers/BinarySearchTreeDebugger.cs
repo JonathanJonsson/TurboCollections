@@ -3,12 +3,21 @@
  
 
  
-	var TBS = new TurboBinarySearchTree();
-	TBS.InsertIterative(1);
-	TBS.SearchIterative(1);
-	TBS.InsertIterative(2);
-	TBS.InsertIterative(-1);
-	TBS.InsertIterative(3);
-	TBS.SearchIterative(3);
-	TBS.DeleteIterative(3);
+	var BST = new TurboBinarySearchTree();
+
+	BST.Insert(1);
+	BST.Insert(2);
+	BST.Insert(-1);
+	BST.Insert(3);
+	
+	// BST.SearchIterative(2);
+	var subTree = BST.Search(2);
+	
+	
+	
+	// BST.Search(1);
+	// var subTree = BST.SearchIterative(2);
+	// var subTreeValue = subTree.value;
+	// subTree.value = 10; //--feels bad taht main tree is changed here
+	// var subTreeValueChange = subTree.value;
 	Console.WriteLine("---DONE---");

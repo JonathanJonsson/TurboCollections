@@ -49,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/43/b761cca9/IEnumerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/1e3d8d2969c4d2f47fdb5382b19d0279bb07c63645c867e8c79f11f575b7ba9/Math.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928523f08964492b10792127821f369a6464b88be5a48e8ce4aa6975f23538/Array.Enumerators.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2e5a78beee0f4abd8ed7ef3636048cf1a20268/60/1a243000/IEnumerator`1.cs" root0="FORCE_HIGHLIGHTING" />
@@ -73,7 +74,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="XThreadsFramesViewSplitterKey" value="0.48209366" />
+    <property name="XThreadsFramesViewSplitterKey" value="0.47945204" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -183,7 +184,8 @@
       <workItem from="1643200036201" duration="10703000" />
       <workItem from="1643450069626" duration="8936000" />
       <workItem from="1643701911768" duration="15659000" />
-      <workItem from="1643739238802" duration="6200000" />
+      <workItem from="1643739238802" duration="6500000" />
+      <workItem from="1643788488748" duration="4767000" />
     </task>
     <servers />
   </component>
@@ -215,6 +217,7 @@
         <PinnedItemInfo parentTag="Frame#TurboCollections.TurboStack`1.Push" memberName="tempStack" />
         <PinnedItemInfo parentTag="Type#TurboCollections.TurboLinkedQueue`1" memberName="head" />
         <PinnedItemInfo parentTag="Frame#TurboCollections.TurboBinarySearchTree.Delete" memberName="newRoot" />
+        <PinnedItemInfo parentTag="Type#TurboCollections.Tree" memberName="right" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -223,6 +226,7 @@
         <watch expression="this.Count" />
         <watch expression="randomList.items[0]" />
         <watch expression="randomList.items[0]" />
+        <watch expression="BST.root.right" />
       </configuration>
     </watches-manager>
   </component>

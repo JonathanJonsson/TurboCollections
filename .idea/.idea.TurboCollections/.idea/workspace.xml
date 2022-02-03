@@ -14,9 +14,10 @@
   <component name="ChangeListManager">
     <list default="true" id="dd89a068-aaaa-43c1-a2e2-1f5bec0e10f0" name="Changes" comment="">
       <changelist_data name="JonathanJ" email="" />
+      <change afterPath="$PROJECT_DIR$/Debuggers/TurboHashSetDebugger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboBinarySearchTreeTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboBinarySearchTreeTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboBinarySearchTree.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboBinarySearchTree.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Debuggers/BinarySearchTreeDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/BinarySearchTreeDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +198,7 @@
       <workItem from="1643701911768" duration="15659000" />
       <workItem from="1643739238802" duration="6500000" />
       <workItem from="1643788488748" duration="20385000" />
-      <workItem from="1643821964456" duration="7303000" />
+      <workItem from="1643821964456" duration="11565000" />
     </task>
     <servers />
   </component>
@@ -230,19 +231,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Debuggers/BinarySearchTreeDebugger.cs</url>
-          <line>55</line>
-          <properties documentPath="C:\Projects\Algorithms and data class\TurboCollections\Debuggers\BinarySearchTreeDebugger.cs" initialLine="55" containingFunctionPresentation="">
-            <startOffsets>
-              <option value="1594" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1652" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

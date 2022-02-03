@@ -2,9 +2,12 @@
 
 public class TurboHashSet<T>
 {
-	private int initialSize = 5;
-	private T[] hashSet = new T[5];
+	private static int initialSize = 15;
+	private T[] hashSet = new T[initialSize];
+ 
 
+	 
+	
 	public bool Insert(T item)
 	{
 		return false;
@@ -12,6 +15,8 @@ public class TurboHashSet<T>
 
 	public bool Exists(T item)
 	{
+		 
+		 
 		return false;
 	}
 
@@ -20,6 +25,12 @@ public class TurboHashSet<T>
 		return false;
 	}
 
+	private void Resize()
+	{
+		
+	}
+
+	 
 
 
 

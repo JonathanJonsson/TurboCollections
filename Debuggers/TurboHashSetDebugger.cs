@@ -3,7 +3,17 @@
 
 
 	var hashSet = new TurboHashSet<string>();
- 
-	 
-	hashSet.Exists("hej");
+
+
+	var y = "A";
+	var X = "B";
+	Console.WriteLine(X.GetHashCode());
+	Console.WriteLine((uint)X.GetHashCode());
+	Console.WriteLine(y.GetHashCode());
+	Console.WriteLine((uint)y.GetHashCode());
+	Console.WriteLine(X.GetHashCode()%10);
+	Console.WriteLine(y.GetHashCode()%10);
+	Console.WriteLine((uint)X.GetHashCode()%10);
+	Console.WriteLine((uint)y.GetHashCode()%10);
+
 	

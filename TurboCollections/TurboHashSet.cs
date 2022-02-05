@@ -4,7 +4,7 @@ public class TurboHashSet<T>
 {
 	private static int initialSize = 15;
 	private T[] hashSet = new T[initialSize];
-	private int itemCount =0;
+	public int itemCount =0;
 
 	 
 	
@@ -29,7 +29,7 @@ public class TurboHashSet<T>
 			Resize();
 		}
 		hashSet[arrayPos+positionCorrection] = item;
-
+		itemCount++;
 		return true;
 	    /*
 	    if(item.Exists) {
@@ -78,6 +78,7 @@ public class TurboHashSet<T>
 
 	public bool Remove(T item)
 	{
+		itemCount--;
 		return false;
 	}
 

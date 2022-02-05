@@ -13,4 +13,25 @@ public class TurboHashSetTests
 		
 		Assert.False(hashSet.Exists(5));
 	}
+	
+	[Test]
+	public void InsertItemReturnsIncreaseInCount()
+	{
+		var hashSet = new TurboHashSet<int>();
+
+		hashSet.Insert(1);
+		Assert.AreEqual(1, hashSet.itemCount);
+
+	}
+
+	[Test]
+	public void RemoveItemDecreasesCount()
+	{
+		var hashSet = new TurboHashSet<int>();
+
+		hashSet.Insert(1);
+		hashSet.Remove(1);
+		Assert.AreEqual(0, hashSet.itemCount);
+	}
 }
+

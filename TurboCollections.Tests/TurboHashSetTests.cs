@@ -33,5 +33,13 @@ public class TurboHashSetTests
 		hashSet.Remove(1);
 		Assert.AreEqual(0, hashSet.itemCount);
 	}
+
+	[Test]
+	public void InsertingSomethingThatAlreadyExistsReturnsFalse()
+	{
+		var hashset =new TurboHashSet<string>();
+		hashset.Insert("a");
+		Assert.IsFalse(hashset.Insert("a"));
+	}
 }
 

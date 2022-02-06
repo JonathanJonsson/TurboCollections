@@ -2,8 +2,8 @@
 
 public class TurboHashSet<T>
 {
-	private static int initialSize = 15;
-	private T[] hashSet = new T[initialSize];
+	private static int initialSize = 4;
+	public T[] hashSet = new T[initialSize];
 	public int itemCount =0;
 
 	 
@@ -17,7 +17,7 @@ public class TurboHashSet<T>
 			return false;
 		}
 
-		if (itemCount/hashSet.Length < 0.3)
+		if (itemCount/hashSet.Length > 0.7)
 		{
 			Resize();
 		}
@@ -28,6 +28,7 @@ public class TurboHashSet<T>
 		{
 			Resize();
 		}
+		Console.WriteLine($"Inserting item {item} in position {arrayPos}");
 		hashSet[arrayPos+positionCorrection] = item;
 		itemCount++;
 		return true;
@@ -59,7 +60,12 @@ public class TurboHashSet<T>
 
 		for (int i = 0; i < 3; i++)
 		{
-			if (hashSet[arrayPos + i].Equals(item))
+			if ((arrayPos + i) > hashSet.Length-1)
+			{
+				arrayPos = 0;
+			}
+ 
+			if (hashSet[arrayPos + i] != null && hashSet[arrayPos + i].Equals(item))
 			{
 				return true;
 			}
@@ -68,12 +74,12 @@ public class TurboHashSet<T>
 		return false;
 	}
 
-	private long GetItemPosition(T item)
+	private int GetItemPosition(T item)
 	{
 		var itemHashCode = (uint) item.GetHashCode();
-		var arrayPos = itemHashCode/hashSet.Length;
+		var arrayPos = itemHashCode%hashSet.Length;
 
-		return arrayPos;
+		return (int)arrayPos;
 	}
 
 	public bool Remove(T item)
@@ -84,18 +90,22 @@ public class TurboHashSet<T>
 
 	private void Resize()
 	{
-		
+		Console.WriteLine("Resize here!");
 	}
 
-	private int CollisionResolver(long positionToCheck)
+	private int CollisionResolver(int positionToCheck)
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			if (hashSet[positionToCheck+i] != null)
+			if ((positionToCheck + i) > hashSet.Length-1)
+			{
+				positionToCheck = 0;
+			}
+			if (hashSet[positionToCheck+i] == null)
 			{
 				return i;
 				
-			}
+			} 
 		}
 		
 		return -1;

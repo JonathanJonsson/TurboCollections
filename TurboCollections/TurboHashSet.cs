@@ -29,7 +29,7 @@ public class TurboHashSet<T>
 			Resize();
 		}
 		Console.WriteLine($"Inserting item {item} in position {arrayPos}");
-		hashSet[arrayPos+positionCorrection] = item;
+		hashSet[positionCorrection] = item;
 		itemCount++;
 		return true;
 	    /*
@@ -97,15 +97,22 @@ public class TurboHashSet<T>
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			if ((positionToCheck + i) > hashSet.Length-1)
+			if ((positionToCheck > hashSet.Length-1))
 			{
 				positionToCheck = 0;
 			}
-			if (hashSet[positionToCheck+i] == null)
+			if (hashSet[positionToCheck] == null)
 			{
-				return i;
 				
-			} 
+				return positionToCheck;
+				
+			}
+			else
+			{
+				positionToCheck++;
+				
+			}
+
 		}
 		
 		return -1;

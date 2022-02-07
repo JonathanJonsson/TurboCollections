@@ -18,7 +18,8 @@
 
 	hashSet.Insert("A");
 	hashSet.Insert("B");
-	hashSet.Insert("A");
+	hashSet.Insert("C");
+	hashSet.Insert("D");
 	
 
 	Console.WriteLine("---Done---");

@@ -16,6 +16,7 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debuggers/TurboHashSetDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboHashSetDebugger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +49,7 @@
     <setting file="file://$PROJECT_DIR$/Debuggers/TurboQueueDebugger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f4708639776589f5ac2739f6fcbfc67343b1f9dac51cc1dbfdb003eef77cc1c/Monitor.CoreCLR.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/de7177e8a31c1e501222daf218f2e9532ff54cdb767595dc7e94cc73c8e95f1/Int32.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/874bbdf2aa6d53d0b6c8136eb34dfdba6545f3b183035c4b2ce2aa1845941d/TextWriter.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/56996bd5b7b025988834f7db72d610de6637f12f9a6dc6f25950f7f158ef3fc4/ConsolePal.Windows.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/928523f08964492b10792127821f369a6464b88be5a48e8ce4aa6975f23538/Array.Enumerators.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/bf408839e35535896e3625c8578c2bfb7bf56ef7ab2c4549ae59c3a19db9ae/Console.cs" root0="SKIP_HIGHLIGHTING" />
@@ -73,6 +75,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4addefb1e79fbe7def610dadfd98060a787c2216743868459b9995d81a829/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TurboCollections.Tests/TurboQuickSortTests.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f52b9d49264ef126bd48babdd8cc869dc58a767b364e767a9a1590a4916fd3/MethodWrapper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ad2a4b807aefd7738e919aa358fa13721e9a4848eb142d8849c2546109d81e1/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/685ce156d8e99635e2730eb8820b287ae745d9e8a9b48edfb6941387e3eca/TestMethodCommand.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/39882c59da88a786946a40bf675cd7facf94e555372b58ae237ea5fc5d9972e/Stopwatch.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -206,7 +209,8 @@
       <workItem from="1644177746478" duration="1539000" />
       <workItem from="1644220642861" duration="374000" />
       <workItem from="1644224400109" duration="451000" />
-      <workItem from="1644264099946" duration="1190000" />
+      <workItem from="1644264099946" duration="1221000" />
+      <workItem from="1644307052548" duration="5851000" />
     </task>
     <servers />
   </component>
@@ -239,6 +243,19 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs</url>
+          <line>19</line>
+          <properties documentPath="C:\Projects\Algorithms and data class\TurboCollections\TurboCollections.Tests\TurboHashSetTests.cs" initialLine="19" containingFunctionPresentation="method 'InsertItemReturnsIncreaseInCount'">
+            <startOffsets>
+              <option value="312" />
+            </startOffsets>
+            <endOffsets>
+              <option value="350" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

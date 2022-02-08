@@ -41,5 +41,18 @@ public class TurboHashSetTests
 		hashset.Insert("a");
 		Assert.IsFalse(hashset.Insert("a"));
 	}
+
+	[Test]
+	public void InsertingSomethingThatDoesNotExistReturnsTrue()
+	{
+		var hashset =new TurboHashSet<string>();
+		hashset.Insert("a");
+		Assert.IsTrue(hashset.Insert("b"));
+	}
+	
+	
+	
+	
+	
 }
 

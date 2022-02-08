@@ -16,7 +16,6 @@
       <changelist_data name="JonathanJ" email="" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TurboCollections/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Debuggers/TurboHashSetDebugger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Debuggers/TurboHashSetDebugger.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboCollections/TurboHashSet.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -210,7 +209,7 @@
       <workItem from="1644220642861" duration="374000" />
       <workItem from="1644224400109" duration="451000" />
       <workItem from="1644264099946" duration="1221000" />
-      <workItem from="1644307052548" duration="5851000" />
+      <workItem from="1644307052548" duration="10737000" />
     </task>
     <servers />
   </component>
@@ -243,19 +242,6 @@
           </properties>
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TurboCollections.Tests/TurboHashSetTests.cs</url>
-          <line>19</line>
-          <properties documentPath="C:\Projects\Algorithms and data class\TurboCollections\TurboCollections.Tests\TurboHashSetTests.cs" initialLine="19" containingFunctionPresentation="method 'InsertItemReturnsIncreaseInCount'">
-            <startOffsets>
-              <option value="312" />
-            </startOffsets>
-            <endOffsets>
-              <option value="350" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>

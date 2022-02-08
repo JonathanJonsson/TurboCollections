@@ -49,9 +49,19 @@ public class TurboHashSetTests
 		hashset.Insert("a");
 		Assert.IsTrue(hashset.Insert("b"));
 	}
-	
-	
-	
+
+
+	[Test]
+	public void ResizeArrayDoublesArraySize()
+	{
+		var hashSet = new TurboHashSet<int>();
+		var initalSize = hashSet.hashSet.Length;
+		hashSet.Insert(1);
+		hashSet.Insert(2);
+		hashSet.Insert(3);
+		Assert.AreEqual(initalSize*2, hashSet.hashSet.Length*2);
+
+	}
 	
 	
 }

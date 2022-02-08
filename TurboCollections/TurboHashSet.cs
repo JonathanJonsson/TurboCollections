@@ -4,7 +4,7 @@ namespace TurboCollections;
 
 public class TurboHashSet<T>
 {
-	private static readonly int initialSize = 4;
+	private static readonly int initialSize = 3;
 	public T[] hashSet = new T[initialSize];
 	public int itemCount;
 
@@ -92,6 +92,22 @@ public class TurboHashSet<T>
 	{
 		
 		Console.WriteLine("Resize here!");
+		itemCount = 0;
+		T[] tempArray = new T[hashSet.Length];
+
+		for (int i = 0; i < hashSet.Length; i++)
+		{
+			tempArray[i] = hashSet[i];
+			hashSet[i] = default;
+		}
+
+		hashSet = new T[tempArray.Length*2];
+		for (int i = 0; i < tempArray.Length; i++)
+		{
+			Insert(tempArray[i]);
+		}
+
+
 	}
 
 	private int CollisionResolver(int positionToCheck)

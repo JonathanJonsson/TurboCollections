@@ -1,4 +1,7 @@
-﻿using NUnit.Framework;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Channels;
+using NUnit.Framework;
 
 namespace TurboCollections.Tests;
 
@@ -60,6 +63,22 @@ public class TurboHashSetTests
 		hashSet.Insert(2);
 		hashSet.Insert(3);
 		Assert.AreEqual(initalSize*2, hashSet.hashSet.Length*2);
+
+	}
+
+	[Test]
+	public void ResizedArrayContainsSameThingsAsBeforeResize()
+	{
+		var hashset = new TurboHashSet<string>();
+		hashset.Insert("Aa");
+		hashset.Insert("Bb");
+		hashset.Insert("Cc");
+		hashset.Insert("Dd");
+		//Resized has happened
+		Assert.IsTrue(hashset.Exists("Aa"));
+		Assert.IsTrue(hashset.Exists("Bb"));
+		Assert.IsTrue(hashset.Exists("Cc"));
+		Assert.IsTrue(hashset.Exists("Dd"));
 
 	}
 	

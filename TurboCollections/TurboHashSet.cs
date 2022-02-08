@@ -1,6 +1,4 @@
-﻿using System.Reflection;
-
-namespace TurboCollections;
+﻿namespace TurboCollections;
 
 public class TurboHashSet<T>
 {
@@ -17,7 +15,7 @@ public class TurboHashSet<T>
 
 		if (itemCount/hashSet.Length > 0.7)
 		{
-			Resize();
+			ResizeAndReHash();
 		}
 
 		var arrayPos = GetItemPosition(item);
@@ -25,32 +23,14 @@ public class TurboHashSet<T>
 
 		if (positionCorrection == -1)
 		{
-			Resize();
+			ResizeAndReHash();
 		}
 
-		Console.WriteLine($"Inserting item {item} in position {arrayPos}");
+		Console.WriteLine($"Inserting item {item} in position {positionCorrection}");
 		hashSet[positionCorrection] = item;
 		itemCount++;
 
 		return true;
-		/*
-		if(item.Exists) {
-		return false;
-		}
-		
-		var itemHashCode = item.gethashcode();
-		
-		var arraypos = itemHashCode%array.length;
-		CheckCollision(); //If three collisions happen --> expondArray();
-		
-		if(numberOfSlotstaken/Arraysize < 0.3) {
-		ExpandArray(); //When expanding array --> ned to re-insert again, new hashcodes will be generated (I think?)
-		}
-		
-		array[arrayPos] = item;
-		return true;
-		
-		*/
 	}
 
 	public bool Exists(T item)
@@ -83,31 +63,36 @@ public class TurboHashSet<T>
 
 	public bool Remove(T item)
 	{
+		if (!Exists(item))
+		{
+			return false;
+		}
+
+		var arrayPos = GetItemPosition(item);
+		hashSet[arrayPos] = default;
 		itemCount--;
 
-		return false;
+		return true;
 	}
 
-	private void Resize()
+	private void ResizeAndReHash()
 	{
-		
 		Console.WriteLine("Resize here!");
 		itemCount = 0;
-		T[] tempArray = new T[hashSet.Length];
+		var tempArray = new T[hashSet.Length];
 
-		for (int i = 0; i < hashSet.Length; i++)
+		for (var i = 0; i < hashSet.Length; i++)
 		{
 			tempArray[i] = hashSet[i];
 			hashSet[i] = default;
 		}
 
 		hashSet = new T[tempArray.Length*2];
-		for (int i = 0; i < tempArray.Length; i++)
+
+		for (var i = 0; i < tempArray.Length; i++)
 		{
 			Insert(tempArray[i]);
 		}
-
-
 	}
 
 	private int CollisionResolver(int positionToCheck)
@@ -120,7 +105,7 @@ public class TurboHashSet<T>
 			}
 
 			// if (hashSet[positionToCheck] == null) // if the slot is empty 
-			if(Equals(hashSet[positionToCheck],default(T)))
+			if (Equals(hashSet[positionToCheck], default(T)))
 			{
 				return positionToCheck; //return the new empty slot for the object
 			}

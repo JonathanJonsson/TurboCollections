@@ -18,13 +18,13 @@
 	// Console.WriteLine((uint)y.GetHashCode()%10);
 	//
 	hashSet.Insert("Aa");
-	hashSet.Insert("Be");
-	hashSet.Insert("Ce");
-	hashSet.Insert("De");
+	hashSet.Insert("Bb");
+	hashSet.Insert("Cc");
+	hashSet.Insert("Dd");
 	hashSet.Insert("Ee");
 	hashSet.Insert("Aa");
-
-	hashSet.Exists("Qu");
+	hashSet.Remove("Bb");
+	hashSet.Exists("Bb");
 	hashSet.Exists("Aa");
 	
 	// hashSet.Insert(1);

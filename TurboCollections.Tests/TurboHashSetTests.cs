@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Channels;
 using NUnit.Framework;
 
@@ -81,7 +82,16 @@ public class TurboHashSetTests
 		Assert.IsTrue(hashset.Exists("Dd"));
 
 	}
-	
-	
+
+	[Test]
+	public void RemoveItemRemovesObjectFromArray()
+	{
+		var hashset = new TurboHashSet<string>();
+		hashset.Insert("Aa");
+		hashset.Insert("Bb");
+		hashset.Remove("Aa");
+		
+		Assert.IsFalse( hashset.Exists("Aa"));
+	}
 }
 

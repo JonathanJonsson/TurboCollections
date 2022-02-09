@@ -22,6 +22,8 @@
 	hashSet.Insert("Cc");
 	hashSet.Insert("Dd");
 	hashSet.Insert("Ee");
+	hashSet.Insert("Ff");
+	hashSet.Insert("Gg");
 	hashSet.Insert("Aa");
 	hashSet.Remove("Bb");
 	hashSet.Exists("Bb");

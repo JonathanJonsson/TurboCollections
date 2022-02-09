@@ -1,4 +1,6 @@
-﻿namespace TurboCollections;
+﻿using System.Text;
+
+namespace TurboCollections;
 
 public class TurboHashSet<T>
 {
@@ -55,10 +57,19 @@ public class TurboHashSet<T>
 
 	private int GetItemPosition(T item)
 	{
-		var itemHashCode = (uint) item.GetHashCode();
+		var itemHashCode = (uint) GetHashCode(item);
+		// var itemHashCode = (uint) item.GetHashCode();
 		var arrayPos = itemHashCode%hashSet.Length;
 
 		return (int) arrayPos;
+	}
+
+	public int GetHashCode(T item)
+	{
+		var g = item.ToString();
+		var t = Encoding.ASCII.GetBytes(g.Substring(0, 1));
+
+		return Convert.ToInt32(t[0]);
 	}
 
 	public bool Remove(T item)
